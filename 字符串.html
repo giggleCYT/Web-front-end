@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+        var n = 'abaasdffggghhjjkkgfddsssss3444343';
+        console.log(n.length);
+        console.log(n.charAt(0));
+        var m = n.indexOf('i');
+        if(m !== -1){
+            console.log('i存现');
+            
+        }else{
+            console.log('i不存在');
+            
+        }
+        while(n.indexOf('g') !== -1){
+            n = n.replace('g','22');
+        }
+        console.log(n);
+        
+        while(n.indexOf('ss') !== -1){
+            n = n.replace('ss','b');
+        }
+        console.log(n);
+        console.log(n.substr('1','5'));
+        var o = {};
+        for(var i = 0;i<n.length;i++){
+            var c = n.charAt(i);
+            if(o[c]){
+                o[c]++;
+            }else{
+                o[c]=1;
+            }
+        }
+        console.log(o);
+        var max = 0;
+        for(var k in o){
+            if(o[k]>max){
+                max = o[k];
+                var s = k;
+            }
+        }
+        console.log(max);
+        console.log('出现次数最多的是'+s);
+        
+                
+        
+        </script>
+    </head>
+</html>

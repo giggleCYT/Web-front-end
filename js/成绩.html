@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            var num = prompt("请输入班级的总人数：");
+            var sum = 0;
+            var average = 0;
+            for (i=1;i<=num;i++){
+                var score = prompt("请输入第"+i+"个同学的成绩");
+                sum = sum+parseFloat(score);
+            }
+            average=sum/num;
+            alert("总成绩为："+sum);
+            alert("班平均分为"+average);
+        </script>
+    </head>
+</html>

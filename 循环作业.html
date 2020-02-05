@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            // 1.求和
+            // var sum = 0;
+            // var an = 0;
+            // for(var i = 1;i <= 100;i++){
+            //     sum += i;
+            // }
+            //an = sum / 100;
+            // alert (sum);
+            //alert (an);
+            // 2.偶数和
+            // var sum = 0;
+            // for (var i = 1;i <= 100; i++){
+            //     if (i % 2 !== 0){
+            //         continue;
+            //     }
+            //     sum += i;
+            // }
+            // 3.100以内能被7整除的数的和
+            // var sum = 0;
+            // for(var i = 1;i <= 100; i++){
+            //     if(i % 7 !== 0 ){
+            //         continue;
+            //     }
+            //     sum += i;
+            // }
+            // alert(sum);
+            //4.正方形
+            // var sta = " ";
+            // for(var i = 1; i <=5 ;i++){
+            //     for (var j = 1;j<=5;j++){
+            //         sta = sta + "❤";
+            //     }
+            //     sta = sta + "\n" ;
+            // }
+            // alert(sta);
+            // 5.三角形
+            // var sta = " ";
+            // for (var i = 1;i <= 5; i++){
+            //     for (var j =5-i;j <=4; j++){
+            //         sta = sta +"❤"
+            //     }
+            //     sta = sta + "\n";
+            // }
+            // alert(sta);
+            // 6.99乘法表
+            // var num = "";
+            // for (var i = 1 ; i<= 9; i++){
+            //     for (var j = 1; j <= i;j++){
+            //         num += j+"×"+i +"="+i*j+"\t";
+            //     }
+            //     num = num + "\n";
+            // }
+
+            // console.log(num);
+            // 7.登录界面                        
+            // var name = prompt("请输入用户名：");
+            // var password = prompt("请输入用户密码：");
+            // while(name !== "admin"){
+            //     name = prompt("请输入用户名：")    
+            // }
+            // while(password !== "123456"){
+            //     password = prompt("请输入用户密码：")
+            // }
+            // alert("登陆成功");
+            var sum = 0;
+            for (var i = 1; i <=100; i++){
+                if(i % 10 == 3){
+                    continue;
+                }
+                sum += i
+            }
+            alert(sum);
+            
+        </script>
+    </head>
+</html>

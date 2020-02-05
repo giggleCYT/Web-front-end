@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+        // var obj = {
+        //     color : 'break',
+        //     zhongliang : '0.45kg',
+        //     pingpai : 'ASUS',
+        //     xinghao : 'FH5900v',
+        //     sayHi:function(){
+        //         console.log('看电影、听音乐、打游戏和敲代码');
+        //     }
+        // }
+        // console.log(obj.color);
+        // console.log(obj.zhongliang);
+        // console.log(obj.pingpai);
+        // console.log(obj.xinghao);
+        // obj.sayHi();
+
+        // var anniu = {
+        //     wigth:'20px',
+        //     heigh:'20px',
+        //     bgcolor:'pink',
+        //     sayHi:function(){
+        //         console.log('点击行为');
+        //     }
+        // }
+        // for(var k in anniu){console.log(anniu[k]);
+        // }
+
+        // var car = {
+        //     zhongliang:'100kg',
+        //     color:'pink',
+        //     pingpai:'宝马',
+        //     sayHi:function(){
+        //         console.log('载人、拉货和耕田');
+        //     }
+        // }
+        // console.log(car.zhongliang);
+        // console.log(car.color);
+        // console.log(car.pingpai);
+        // car.sayHi();
+
+        // var n = prompt('请输入数组：');
+        // var arr = n.split(',');
+        // function a(){
+        //     var b = [];
+        //     for(var i = 0;i<arr.length;i++){
+        //         b[i]=arr[arr.length-i-1];
+        //     }
+        //     return b;
+        // }
+        // console.log(a(arr));
+        
+        // var n = prompt('请输入数组：');
+        // var arr = n.split(',');
+        // for(var i = 0;i<=arr.length;i++){
+        //         for (j=0;j<=arr.length-i-1;j++){
+        //         if (arr[j] > arr[j+1]){
+        //             var temp = arr[j];
+        //             arr[j] = arr[j+1];
+        //             arr[j+1] = temp;
+        //         }
+        //     }
+        // }
+        // console.log(arr);
+        while(option!='5') {
+        var option=prompt('欢迎使用简易计算器：\n1.加法运算\n2.减法运算\n3.乘法运算\n4.除法运算\n5.退出');
+                switch(option){
+                    case '1': 
+                    var sav=parseInt(prompt('请输入一个数:'));
+                    var save=parseInt(prompt('请输入一个数:'));
+                    var sum=sav + save;
+                    alert('您的结果为：'+sum);
+                    break;
+                    case '2': 
+                    var s=parseInt(prompt('请输入一个数:'));
+                    var sa=parseInt(prompt('请输入一个数:'));
+                    var j=s-sa;
+                    alert('您的结果为：'+j);
+                    break;
+                    case '3': 
+                    var q=parseInt(prompt('请输入一个数:'));
+                    var qq=parseInt(prompt('请输入一个数:'));
+                    var x=q*qq;
+                    alert('您的结果为:'+x);
+                    break;
+                    case'4':
+                    var cc=parseInt(prompt('请输入一个数:'));
+                    var ccc=parseInt(prompt('请输入一个数:'));
+                    var c=cc/ccc;
+                    alert('您的结果为：'+c);
+                    case '5': 
+                    alert('您正在退出...');
+                    break;
+                }
+            }
+        </script>
+    </head>
+</html>

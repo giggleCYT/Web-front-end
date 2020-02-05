@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+    <head>
+            <audio src="img/A Little Love-冯曦妤.mp3" autoplay="true" playcount="-1"></audio>
+        <style>
+        
+        </style>
+    </head>
+    <body bgcolor="pink">
+            <form method="get" name="f" id="form1">
+                    <table border="1">
+                    <tr valign="top">
+                    <td>你女朋友的姓名：
+                    <input type="text" id="f_name" name="f_name"><br />
+                    年龄：
+                    <input type="text" id="age" name="age"><br />
+                    长的怎么样?
+                    <select name="handsome" id="handsome">
+                    <option value="非常美">非常美</option>
+                    <option value="亭亭玉立">亭亭玉立</option>
+                    <option value="沉鱼落雁">沉鱼落雁</option>
+                    <option value="闭月羞花">闭月羞花</option>
+                    <option value="国色天香">国色天香</option>
+                    <option value="倾国倾城">倾国倾城</option>
+                    <option value="秀色可餐">秀色可餐</option>
+                    <option value="美得没天理">美得没天理</option>
+                    <option value="美得无法用言语形容">美得无法用言语形容</option>
+                    <option value="怎么会有这么迷人的女子？">怎么会有这么迷人的女子？</option>
+                    </select>
+                    </td>
+                    <td align="center">对她说三个字：<br />
+                    <textarea rows="10" cols="30" id="threeword" name="threeword"></textarea><br />
+                    <input type="submit" value="提交" onClick="return getMessage();">
+                    </table>
+                    </form>
+                     
+                    <script type="text/javascript">
+                    function getMessage()
+                    {
+                    var bian2=f.f_name.value;
+                    if(bian2=="小可爱"){
+                    alert("名字填写正确")
+                    }else{
+                    alert("臭猪，这你都不知道？")
+                    }
+                    var bian3=f.age.value;
+                    if(bian3=="18"){
+                    alert("年龄回答正确")
+                    }else{
+                    alert("你敢不敢再说一遍？")
+                    }
+                    var bian4=f.handsome.value;
+                    if(bian4=="非常美"){
+                    alert("确实是非常美")
+                    }else if (bian4=="亭亭玉立"){
+                    alert("对，这就是我名字的来历")
+                    }else if (bian4=="沉鱼落雁"){
+                    alert("鱼沉了就吃不到了")
+                    }else if (bian4=="闭月羞花"){
+                    alert("我可以理解成你在说我胖吗？")
+                    }else if (bian4=="国色天香"){
+                    alert("真香")
+                    }else if (bian4=="倾国倾城"){
+                    alert("那得多壮观？")
+                    }else if (bian4=="秀色可餐"){
+                    alert("我觉得你可以不用吃饭了")
+                    }else if (bian4=="美得没天理"){
+                    alert("对，所以听我的，都听我的")
+                    }else if (bian4=="美得无法用言语形容"){
+                    alert("你是语文不好吧")
+                    }else if (bian4=="怎么会有这么迷人的女子？"){
+                    alert("哈哈哈，我也觉得")
+                    }
+                    var bian5=f.threeword.value;
+                    if(bian5=="我爱你"){
+                    alert("还好你识相")
+                    }else{
+                    alert("猪儿虫，你只能说爱我")
+                    }
+                    }
+                    </script>
+        <!-- <button onclick="window.location.href='yh.html'">烟花</button> -->
+        <script src="js/11.js"></script>
+
+<script src="js/22.js"></script>
+
+<script>(function($){
+  $.fn.snow = function(options){
+  var $flake = $('<div id="snowbox" />').css({'position': 'absolute','z-index':'9999', 'top': '-50px'}).html('&#10052;'),
+  documentHeight     = $(document).height(),
+  documentWidth  = $(document).width(),
+  defaults = {
+     minSize   : 10,
+     maxSize   : 20,
+     newOn     : 1000,
+     flakeColor : "#FFFFFF" /* 此处可以定义雪花颜色，若要白色可以改为#FFFFFF */
+  },
+  options = $.extend({}, defaults, options);
+  var interval= setInterval( function(){
+  var startPositionLeft = Math.random() * documentWidth - 100,
+  startOpacity = 0.5 + Math.random(),
+  sizeFlake = options.minSize + Math.random() * options.maxSize,
+  endPositionTop = documentHeight - 200,
+  endPositionLeft = startPositionLeft - 500 + Math.random() * 500,
+  durationFall = documentHeight * 10 + Math.random() * 5000;
+  $flake.clone().appendTo('body').css({
+     left: startPositionLeft,
+     opacity: startOpacity,
+     'font-size': sizeFlake,
+     color: options.flakeColor   }).animate({
+     top: endPositionTop,
+     left: endPositionLeft,
+     opacity: 0.2
+  },durationFall,'linear',function(){
+       $(this).remove()
+  });
+  }, options.newOn);
+   };
+   })(jQuery);$(function(){
+   $.fn.snow({
+      minSize: 1, /* 定义雪花最小尺寸 */
+      maxSize: 25,/* 定义雪花最大尺寸 */
+      newOn: 30  /* 定义密集程度，数字越小越密集 */
+   });});</script>
+    </body>
+</html>

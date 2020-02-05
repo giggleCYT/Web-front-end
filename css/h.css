@@ -1,0 +1,13 @@
+body{
+    background-color: rgb(59, 51, 53);
+    font-size: 12px;
+}
+p{
+    color: hotpink;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 50px;
+    text-align: center;
+}
+#id{
+    position: relative;
+}

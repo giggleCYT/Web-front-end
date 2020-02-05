@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            var currentMoney=100;
+            while(option!='4') {
+                var option=prompt('请输入您要的操作：\n1.存钱\n2.取钱\n3.显示余额\n4.退出');
+                switch(option){
+                    case '1': 
+                    var save=parseInt(prompt('请输入存钱数:'));
+                    currentMoney += save;
+                    alert('您存入：'+save+'元');
+                    break;
+                    case '2': 
+                    var take=parseInt(prompt('请输入取钱数:'));
+                    currentMoney -= take;
+                    alert('您取出：'+take+'元');
+                    break;
+                    case '3': 
+                    alert('您当前的存款总额是：'+currentMoney+'元');
+                    break;
+                    case '4': 
+                    alert('您正在退出...');
+                    break;
+                }
+            }
+        </script>
+    </head>
+</html>

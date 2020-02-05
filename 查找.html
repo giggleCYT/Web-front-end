@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+        var str = ['red','blue','red','green','pink','red'];
+        var index = str.indexOf('red');
+        var num = 0;
+        while(index !== -1){
+            console.log(index);
+            num++;
+            index = str.indexOf('red',index+1);
+            
+        }
+        console.log('red出现的次数为：'+num);
+        
+        </script>
+    </head>
+</html>

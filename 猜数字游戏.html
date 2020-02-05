@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+        function getRandom(min,max){
+            return Math.floor(Math.random()*(max-min+1))+min;
+        }
+        var random = getRandom(1,50);
+        
+        while(true){
+            var num = prompt("你来猜数字，数字在1~50之间:");
+            var i =1;
+            i++;
+            var sum =0;
+            sum+=i;
+            if(i>=1||i<=10){
+            if(num > random){
+                alert("你猜大了");
+            }else if(num > random){
+                alert("你猜小了");
+            }else if(num = random){
+                alert("恭喜你，你猜对了");
+                break;
+            }
+            }
+        }
+        </script>
+    </head>
+</html>
