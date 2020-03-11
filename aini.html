@@ -1,20 +1,34 @@
 <!DOCTYPE html>
 <html>
     <head>
+       <title>给小可爱</title>
             <audio src="img/A Little Love-冯曦妤.mp3" autoplay="true" playcount="-1"></audio>
         <style>
-        
+        #head{
+           margin: auto;
+           background-color: rgb(118, 180, 228);
+           width: 1080px;
+           height: 600px;
+        }
+        table{
+           width: 540px;
+           height: 600px;
+        }
+        p{
+           margin: 20px;
+        }
         </style>
     </head>
     <body bgcolor="pink">
+       <div id="head">
             <form method="get" name="f" id="form1">
                     <table border="1">
                     <tr valign="top">
-                    <td>你女朋友的姓名：
+                    <td><p>你女朋友的姓名：</p>
                     <input type="text" id="f_name" name="f_name"><br />
-                    年龄：
+                    <p>年龄：</p>
                     <input type="text" id="age" name="age"><br />
-                    长的怎么样?
+                    <p>长的怎么样?</p>
                     <select name="handsome" id="handsome">
                     <option value="非常美">非常美</option>
                     <option value="亭亭玉立">亭亭玉立</option>
@@ -32,8 +46,8 @@
                     <textarea rows="10" cols="30" id="threeword" name="threeword"></textarea><br />
                     <input type="submit" value="提交" onClick="return getMessage();">
                     </table>
-                    </form>
-                     
+                    </form> 
+                  </div>
                     <script type="text/javascript">
                     function getMessage()
                     {
