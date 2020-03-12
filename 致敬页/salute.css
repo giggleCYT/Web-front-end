@@ -1,0 +1,63 @@
+#main{
+    background-color: white;
+}
+#main_1{
+    background-color: #F2F3F3;
+    width: 98%;
+    margin-top: 40px;
+    margin-left: 20px;
+    border-radius: 5px;
+}
+#title{
+    margin-top: 40px;
+}
+#title h1,p{
+    text-align: center;
+    color: #4b4b4b;;
+}
+#title h1{
+    font-size: 40px;
+}
+#img-div{
+    width: 95%;
+    background-color: white;
+    margin:auto;
+}
+#img-div p{
+    margin: 0;
+    line-height: 60px;
+}
+#image{
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+#tribute-info{
+    width: 40%;
+    margin: auto;
+}
+#tribute-info h3{
+    text-align: center;
+    color: #4b4b4b;
+}
+#tribute-info ul{
+    color: #4b4b4b;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+#tribute-info ul li{
+    margin: 20px;
+}
+#tribute-info p{
+    font-style: italic;
+    font-size: 18px;
+    text-align: left;
+}
+
+#tribute-link h3{
+    color: #4b4b4b;
+    text-align: center;
+    font-weight: bold;
+    line-height: 100px;
+}

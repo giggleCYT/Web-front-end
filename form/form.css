@@ -1,0 +1,71 @@
+body{
+    background-color: powderblue;
+
+}
+#main{
+    width: 50%;
+    margin-top: 50px;
+    margin-left: 25%;
+    margin-bottom: 50px;
+}
+#title{
+    text-align: center;
+    line-height: 10px;
+    color: white;
+}
+#description{
+    text-align: center;
+    font-style: italic;
+    font-size: 20px;
+}
+#survey-form{
+    background-color: rgb(221, 160, 160);
+    padding-bottom: 50px;
+    border-radius: 3px;
+}
+#name{
+    padding-top: 50px;
+}
+label,p{
+    font-size: 20px;
+    color: white;
+    margin-left: 2.5%;
+    line-height: 0;
+}
+.one{
+    width: 95%;
+    height: 30px;
+    margin-left: 2.5%;
+    margin-bottom: 20px;
+    margin-top: 5px;
+    border: 2px solid #999;
+    border-radius: 6px;
+}
+option{
+    color: #999;
+}
+select{
+    width: 95%;
+    height: 35px;
+    margin-left: 2.5%;
+    margin-bottom: 20px;
+    margin-top: 5px;
+    border: 2px solid #999;
+    border-radius: 6px;
+}
+input{
+    margin-bottom: 20px;
+}
+#comment{
+    width: 95%;
+    height: 120px;
+    margin-left: 2.5%;
+    margin-bottom: 20px;
+}
+#submit{
+    width: 95%;
+    height: 40px;
+    color: navy;
+    margin-left: 2.5%;
+    font-size: 20px;
+}
