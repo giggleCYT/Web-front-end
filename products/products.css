@@ -1,0 +1,174 @@
+body{
+    background-color: #eee;
+}
+#header{
+    background-attachment: scroll;
+    top: 0;
+    height: 60px;
+    width: 100%;
+    background-color: #eee;
+}
+#header img{
+    height: 40px;
+    width: auto;
+    float: left;
+    margin-left: 0;
+    margin-top: 10px;
+}
+#nav-bar{
+    float: right;
+}
+#nav-bar ul{
+    list-style: none;
+}
+#nav-bar ul li{
+    display: inline-block;
+    margin-right: 80px;
+}
+#nav-bar ul li a{
+    text-decoration: none;
+    color: black;
+}
+#from-email{
+    width: 100%;
+    text-align: center;
+    margin-top: 40px;
+}
+#from-email input[type='email']{
+    max-width: 275px;
+    width: 100%;
+    padding: 5px;
+}
+#from-email input[type='submit']{
+    max-width: 150px;
+    width: 100%;
+    margin-top: 20px;
+    padding: 5px;
+    border: 0;
+    background-color: #f1c40f;
+}
+#from-email input[type='submit']:hover{
+    background-color: orange;
+}
+#features{
+    width: 100%;
+    margin-top: 80px;
+}
+.features_1{
+    width: 100%;
+    margin-top: 20px;
+}
+.icon{
+    float: left; 
+    display: flex;
+    margin-left: 20%;
+    margin-top: 40px;
+}
+@media (max-width: 550px) {
+    #features .icon {
+      display: none;
+    }
+  }
+.icon img{
+    width: auto;
+    height: 90px;
+}
+.desc{
+    padding-left: 80px;
+    padding-right: 80px;
+    padding-top: 30px;
+    padding-bottom: 20px;
+}
+.desc h2,p{
+    text-align: left;
+    margin-left: 30%;
+    line-height: 150%;
+}
+@media (max-width: 550px) {
+    #features .desc {
+      width: 100%;
+      text-align: center;
+      padding: 0;
+      height: 150px;
+    }
+  }
+  
+  @media (max-width: 650px) {
+    #features {
+      margin-top: 0;
+    }
+  }
+#video_1{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+#video_1 > iframe {
+    max-width: 560px;
+    width: 100%;
+  }
+ .pricing_1{
+      margin-top: 60px;
+      margin-left: 13%;
+      width: 100%;
+      height: 300px;
+  }
+.product{
+    width: 23%;
+    height: 300px;
+    border: 1px solid black;
+    float: left;
+    margin: 1%;
+}
+.level{
+    background-color: #ddd;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+}
+h2{
+    text-align: center;
+}
+.product ul{
+    list-style: none;
+    line-height: 30px;
+    text-align: center;
+    margin: 20px;
+}
+button{
+    display: block;
+    margin: 0 auto;
+    height: 30px;
+    width: 80px;
+    border: none;
+    background-color: #f1c40f;
+}
+button:hover{
+    background-color: orange;
+}
+footer{
+    background-color: #ddd;
+    width: 73.5%;
+    height: 60px;
+    margin-left: 14%;
+    margin-top: 30px;
+}
+footer ul{
+    display: flex;
+    list-style: none;
+    justify-content: flex-end;
+}
+footer ul li{
+    padding: 0 10px;
+}
+footer ul li a{
+    text-decoration: none;
+    color: black;
+}
+footer > span {
+    margin-top: 5px;
+    display: flex;
+    justify-content: flex-end;
+    font-size: 0.9em;
+    color: #444;
+  }
