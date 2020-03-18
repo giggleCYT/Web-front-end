@@ -1,0 +1,150 @@
+body{
+    margin: 0;
+    top: 0;
+}
+#navbar{
+    position: fixed;
+    width: 100%;
+    height: 70px;
+    background-color: brown;
+}
+#navbar nav{
+    height: 70px;
+    float: right;
+    font-size: 25px;
+    text-align: center;
+    line-height: 70px;
+}
+ul{
+    list-style: none;
+    padding-right: 20px;
+    margin: 0;
+}
+ul li{
+    display: inline-block;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+#navbar nav ul li:hover{
+    background-color: #45567d;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+#welcome-section{
+    width: 100%;
+    height: 100vh;
+    background-color: #303841;
+    color: white;
+    text-align: center;
+    line-height: 100vh;
+}
+#welcome-section p{
+    color: brown;
+    font-size: 30px;
+    font-style: italic;
+}
+.h1{
+    margin: 0;
+    height: 10vh;
+    width: 100%;
+    font-size: 50px;
+    color: white;
+    text-align: center;
+}
+h2{
+    padding-top: 60px;
+    text-decoration: white;
+    font-style: italic;
+}
+#projects{
+    width: 100%;
+    background-color: #45567d;
+}
+.project-tile_1{
+    background-color: gray;
+    float: left;
+    text-align: center;
+    line-height: 30vh;
+    border-radius: 20px;
+    font-size: 30px;
+    margin-top: 60px;
+    margin-left: 15vh;
+    width: 30%;
+    height: 30vh;
+}
+.project-tile_1:hover{
+    background-color: rgb(77, 76, 76);
+}
+.project-tile_2{
+    background-color: gray;
+    float: right;
+    text-align: center;
+    line-height: 30vh;
+    font-size: 30px;
+    margin-top: 60px;
+    border-radius: 20px;
+    margin-right: 15vh;
+    width: 30%;
+    height: 30vh;
+}
+.project-tile_2:hover{
+    background-color: rgb(77, 76, 76);
+}
+.project-tile{
+    background-color: rgb(151, 125, 125);
+    width: 20%;
+    text-align: center;
+    line-height: 15vh;
+    height: 15vh;
+    margin-top: 50vh;
+    margin-left: 40%;
+    border-radius: 20px;
+    
+}
+.project-tile:hover{
+    background-color: brown;
+}
+@media (max-width:780px){
+    .project-tile_1{
+        margin-top: 100px;
+    }
+    .project-tile_2{
+        margin-top: 100px;
+    }
+    .project-tile{
+        margin-top: 240px;
+    }
+}
+#profile-link{
+    width: 100%;
+    border-bottom: 5px solid brown;
+    background-color: #303841;
+}
+#profile-link p{
+    text-align: center;
+    color: white;
+    font-style: italic;
+}
+#profile-link ul{
+    text-align: center;
+    margin-top: 40px;
+}
+#profile-link ul li{
+    padding: 20px;
+    font-size: 25px;
+}
+#profile-link ul li:hover{
+    transform: scale(1.2);
+}
+.footer{
+    background-color: #303841;
+}
+.footer p{
+    margin: 0;
+    display: inline-block;
+    padding-left: 13%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
