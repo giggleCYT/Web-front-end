@@ -1,0 +1,40 @@
+body {
+    background-color: #e1f2fb;
+}
+
+.box {
+    width: 350px;
+    height: 465px;
+    margin: 0 auto;
+    background-color: #e1f2fb;
+    border-radius: 20px;
+    box-shadow: -8px 0 7px -2px #fff, 0 -8px 7px -2px #fff, 0 8px 7px -2px rgb(195, 194, 194), 8px 0 7px -2px rgb(195, 194, 194);
+}
+
+.box1 {
+    width: 80px;
+    height: 80px;
+    margin-top: 50px;
+    margin-left: 60px;
+    border-radius: 20px;
+    float: left;
+    box-shadow: -8px 0 7px -2px #fff, 0 -8px 7px -2px #fff, 0 8px 7px -2px rgb(195, 194, 194), 8px 0 7px -2px rgb(195, 194, 194);
+}
+
+.box1:hover {
+    box-shadow: -8px 0 7px -2px rgb(195, 194, 194) inset, 0 -8px 7px -2px rgb(195, 194, 194) inset, 0 8px 7px -2px #fff inset, 8px 0 7px -2px #fff inset;
+}
+
+.box1:active {
+    box-shadow: -8px 0 7px -2px rgb(195, 194, 194) inset, 0 -8px 7px -2px rgb(195, 194, 194) inset, 0 8px 7px -2px #fff inset, 8px 0 7px -2px #fff inset;
+}
+
+.box2 {
+    width: 80px;
+    height: 80px;
+    margin-top: 50px;
+    margin-left: 60px;
+    float: left;
+    border-radius: 20px;
+    box-shadow: -8px 0 7px -2px #fff, 0 -8px 7px -2px #fff, 0 8px 7px -2px rgb(195, 194, 194), 8px 0 7px -2px rgb(195, 194, 194);
+}
