@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>新浪</title>
+    <style>
+        div {
+            width: 50px;
+            height: 30px;
+            margin: 0 auto;
+            border: 1px solid #999;
+            text-align: center;
+            line-height: 30px;
+        }
+        
+        .e {
+            width: 50px;
+            height: 120px;
+            border: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="e">
+        <div class="d">微博</div>
+        <div class="a">私信</div>
+        <div class="b">评论</div>
+        <div class="c">@我</div>
+    </div>
+
+    <script>
+        var a = document.querySelector('.a');
+        var b = document.querySelector('.b');
+        var c = document.querySelector('.c');
+        var d = document.querySelector('.d');
+        var e = document.querySelector('.e');
+        e.onmouseover = function() {
+            d.style.backgroundColor = 'grey';
+            a.style.display = 'block';
+            b.style.display = 'block';
+            c.style.display = 'block';
+        }
+        e.onmouseout = function() {
+            d.style.backgroundColor = 'white';
+            a.style.display = 'none';
+            b.style.display = 'none';
+            c.style.display = 'none';
+        }
+        a.onmouseover = function() {
+            this.style.backgroundColor = 'pink';
+        }
+        a.onmouseout = function() {
+            this.style.backgroundColor = 'white';
+        }
+        b.onmouseover = function() {
+            this.style.backgroundColor = 'pink';
+        }
+        b.onmouseout = function() {
+            this.style.backgroundColor = 'white';
+        }
+        c.onmouseover = function() {
+            this.style.backgroundColor = 'pink';
+        }
+        c.onmouseout = function() {
+            this.style.backgroundColor = 'white';
+        }
+    </script>
+</body>
+
+</html>

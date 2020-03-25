@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>隐藏</title>
+    <style>
+        div {
+            position: relative;
+            width: 720px;
+            margin: 0 auto;
+        }
+        
+        img {
+            width: 710px;
+        }
+        
+        i {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            border: 1px solid #999;
+            top: 0;
+            left: -10px;
+            text-align: center;
+            line-height: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <img src="京东.png">
+        <i class="footer">×</i>
+    </div>
+    <script>
+        var div = document.querySelector('div');
+        var i = document.querySelector('i');
+        i.onclick = function() {
+            div.style.display = 'none';
+        }
+    </script>
+</body>
+
+</html>

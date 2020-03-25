@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>作业1</title>
+    <style>
+        .ipt {
+            color: #999;
+            width: 300px;
+            height: 30px;
+            outline: none;
+            border: 1px solid gray;
+        }
+        
+        .befor {
+            border: 1px solid pink;
+        }
+        
+        .after {
+            border: 1px solid gray;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text" value="邮箱/ID/手机号" class="ipt">
+    <script>
+        var input = document.querySelector('input');
+        input.onfocus = function() {
+            if (this.value === '邮箱/ID/手机号') {
+                this.value = "";
+                this.className = 'ipt befor';
+            }
+        }
+        input.onblur = function() {
+            if (this.value === '') {
+                this.value = '邮箱/ID/手机号';
+                this.className = 'ipt after';
+            }
+        }
+    </script>
+</body>
+
+
+</html>

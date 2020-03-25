@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>开关灯</title>
+</head>
+
+<body>
+    <button>开关灯</button>
+    <script>
+        var btn = document.querySelector('button');
+        var body = document.querySelector('body');
+        var flag = 0;
+        btn.onclick = function() {
+            if (flag === 0) {
+                body.style.backgroundColor = 'white';
+                flag = 1;
+            } else {
+                body.style.backgroundColor = 'black';
+                flag = 0;
+            }
+        }
+    </script>
+</body>
+
+</html>
