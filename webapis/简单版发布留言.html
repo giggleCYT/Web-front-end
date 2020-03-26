@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>简单版发布留言</title>
+    <style>
+        textarea {
+            width: 600px;
+            height: 300px;
+            border: 1px solid pink;
+            margin: 0 auto;
+        }
+        
+        button {
+            width: 60px;
+        }
+        
+        ul {
+            color: white;
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <textarea name="" id=""></textarea>
+    <button>提交</button>
+    <ul></ul>
+    <script>
+        var text = document.querySelector('textarea');
+        var btn = document.querySelector('button');
+        var ul = document.querySelector('ul');
+        btn.onclick = function() {
+            if (text.value == '') {
+                alert('你没有输入文字');
+            } else {
+                var li = document.createElement('li');
+                li.innerHTML = text.value;
+                ul.insertBefore(li, ul.children[0])
+            }
+        }
+    </script>
+</body>
+
+</html>

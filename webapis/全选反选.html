@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>全选反选</title>
+    <style>
+        table {
+            margin: 0 auto;
+        }
+        
+        tr {
+            background-color: rgb(86, 86, 236);
+            height: 40px;
+        }
+        
+        th {
+            width: 100px;
+        }
+        
+        #one tr {
+            background-color: rgb(218, 213, 213);
+        }
+        
+        #one tr:hover {
+            background-color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <th><input type="checkbox" id="all"></th>
+            <th>商品</th>
+            <th>价钱</th>
+        </tr>
+        <tbody id="one">
+            <tr>
+                <th><input type="checkbox"></th>
+                <th>IPhone8</th>
+                <th>8000</th>
+            </tr>
+            <tr>
+                <th><input type="checkbox"></th>
+                <th>iPad Pro</th>
+                <th>5000</th>
+            </tr>
+            <tr>
+                <th><input type="checkbox"></th>
+                <th>iPad Air</th>
+                <th>2000</th>
+            </tr>
+            <tr>
+                <th><input type="checkbox"></th>
+                <th>Apple Watch</th>
+                <th>2000</th>
+            </tr>
+        </tbody>
+    </table>
+    <script>
+        var t_all = document.querySelector('#all');
+        var t_one = document.getElementById('one').getElementsByTagName('input');
+        // console.log(t_one);
+        t_all.onclick = function() {
+            // console.log(this.checked);
+            for (var i = 0; i < t_one.length; i++) {
+                t_one[i].checked = this.checked;
+            }
+        }
+        for (var i = 0; i < t_one.length; i++) {
+            t_one[i].onclick = function() {
+                var flag = true;
+                for (var i = 0; i < t_one.length; i++) {
+                    if (!t_one[i].checked) {
+                        flag = false;
+                        break;
+                    }
+                }
+                t_all.checked = flag;
+            }
+        }
+    </script>
+</body>
+
+</html>

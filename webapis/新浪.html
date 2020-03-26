@@ -13,57 +13,43 @@
             line-height: 30px;
         }
         
-        .e {
+        ul {
+            list-style: none;
+            display: none;
+            margin: 0;
+            padding: 0;
+        }
+        
+        li {
             width: 50px;
-            height: 120px;
-            border: 0;
+            height: 30px;
+            border: 1px solid #999;
+        }
+        
+        li:hover {
+            background-color: pink;
         }
     </style>
 </head>
 
 <body>
     <div class="e">
-        <div class="d">微博</div>
-        <div class="a">私信</div>
-        <div class="b">评论</div>
-        <div class="c">@我</div>
+        <a>微博</a>
+        <ul>
+            <li>私信</li>
+            <li>评论</li>
+            <li>@我</li>
+        </ul>
     </div>
 
     <script>
-        var a = document.querySelector('.a');
-        var b = document.querySelector('.b');
-        var c = document.querySelector('.c');
-        var d = document.querySelector('.d');
-        var e = document.querySelector('.e');
-        e.onmouseover = function() {
-            d.style.backgroundColor = 'grey';
-            a.style.display = 'block';
-            b.style.display = 'block';
-            c.style.display = 'block';
-        }
-        e.onmouseout = function() {
-            d.style.backgroundColor = 'white';
-            a.style.display = 'none';
-            b.style.display = 'none';
-            c.style.display = 'none';
-        }
-        a.onmouseover = function() {
-            this.style.backgroundColor = 'pink';
+        var a = document.querySelector('.e');
+        var ul = document.querySelector('ul');
+        a.onmousemove = function() {
+            ul.style.display = 'block';
         }
         a.onmouseout = function() {
-            this.style.backgroundColor = 'white';
-        }
-        b.onmouseover = function() {
-            this.style.backgroundColor = 'pink';
-        }
-        b.onmouseout = function() {
-            this.style.backgroundColor = 'white';
-        }
-        c.onmouseover = function() {
-            this.style.backgroundColor = 'pink';
-        }
-        c.onmouseout = function() {
-            this.style.backgroundColor = 'white';
+            ul.style.display = 'none';
         }
     </script>
 </body>

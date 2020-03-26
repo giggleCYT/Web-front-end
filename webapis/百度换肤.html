@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>百度换肤</title>
+    <style>
+        body {
+            background: url(layer2.jpg);
+        }
+        
+        img {
+            width: 150px;
+        }
+        
+        ul {
+            list-style: none;
+            width: 740px;
+        }
+        
+        li {
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li><img src="layer2.jpg"></li>
+        <li><img src="layer3.jpg"></li>
+        <li><img src="layer4.jpg"></li>
+        <li><img src="layer5.jpg"></li>
+    </ul>
+    <script>
+        var imgs = document.querySelector('ul').querySelectorAll('img');
+        for (var i = 0; i < imgs.length; i++) {
+            imgs[i].onclick = function() {
+                document.body.style.background = 'url(' + this.src + ')';
+            }
+        }
+    </script>
+</body>
+
+</html>
