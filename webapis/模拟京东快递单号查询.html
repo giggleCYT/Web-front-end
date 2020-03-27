@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>模拟京东快递单号查询</title>
+</head>
+<style>
+    .bord {
+        position: relative;
+        width: 178px;
+        margin: 100px;
+    }
+    
+    .con {
+        display: none;
+        position: absolute;
+        top: -40px;
+        width: 171px;
+        border: 1px solid #999;
+        box-shadow: 0 2px 4px #999;
+        padding: 5px 0;
+        font-size: 18px;
+        line-height: 20px;
+        color: #333;
+    }
+    
+    .con:before {
+        content: '';
+        width: 0;
+        height: 0;
+        position: absolute;
+        top: 28px;
+        left: 18px;
+        border: 8px solid #000;
+        border-style: solid dashed dashed;
+        border-color: #fff transparent transparent;
+    }
+    
+    input {
+        width: 171px;
+        font-size: 10px;
+    }
+</style>
+
+<body>
+    <div class="bord">
+        <div class="con">11</div>
+        <input type="text" placeholder="请输入您要查询的快递单号">
+    </div>
+    <script>
+        var con = document.querySelector('.con');
+        var jd = document.querySelector('input');
+        jd.addEventListener('keyup', function() {
+            if (this.value === '') {
+                con.style.display = 'none';
+            } else {
+                con.style.display = 'block';
+                con.innerHTML = this.value;
+            }
+        });
+        jd.addEventListener('blur', function() {
+            con.style.display = 'none';
+        });
+        jd.addEventListener('focus', function() {
+            if (jd.value !== "") {
+                con.style.display = 'block';
+
+            }
+        })
+    </script>
+</body>
+
+</html>

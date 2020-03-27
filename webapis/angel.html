@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>小天使</title>
+    <style>
+        img {
+            position: absolute;
+            width: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <img src="angel.gif">
+    <script>
+        var img = document.querySelector('img');
+        document.addEventListener('mousemove', function(e) {
+            var x = e.pageX;
+            var y = e.pageY;
+            img.style.left = x - 100 + 'px';
+            img.style.top = y - 100 + 'px';
+        })
+    </script>
+</body>
+
+</html>

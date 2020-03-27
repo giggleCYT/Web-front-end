@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>动态生成表格</title>
+    <style>
+        table {
+            margin: 0 auto;
+        }
+        
+        thead {
+            background-color: #eee;
+        }
+        
+        th {
+            width: 100px;
+            border: 1px solid #999;
+        }
+        
+        tr {
+            height: 30px;
+        }
+        
+        td {
+            width: 100px;
+            border: 1px solid #999;
+            text-align: center;
+            line-height: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>姓名</th>
+                <th>科目</th>
+                <th>成绩</th>
+                <th>操作</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    <script>
+        var dates = [{
+            name: '魏璎珞',
+            subject: 'JavaScript',
+            score: 100
+        }, {
+            name: '弘历',
+            subject: 'JavaScript',
+            score: 98
+        }, {
+            name: '傅恒',
+            subject: 'JavaScript',
+            score: 99
+        }, {
+            name: '明玉',
+            subject: 'JavaScript',
+            score: 95
+        }];
+        var tbody = document.querySelector('tbody');
+        // console.log(tbody);
+        for (var i = 0; i < dates.length; i++) {
+            var tr = document.createElement('tr');
+            tbody.appendChild(tr);
+            for (var k in dates[i]) {
+                var td = document.createElement('td');
+                td.innerHTML = dates[i][k];
+                tr.appendChild(td);
+            }
+            var td = document.createElement('td');
+            td.innerHTML = ('<a herf="jabascript:;">删除</a>');
+            tr.appendChild(td);
+        }
+        var as = document.querySelectorAll('a');
+        for (var i = 0; i < as.length; i++) {
+            as[i].onclick = function() {
+                tbody.removeChild(this.parentNode.parentNode);
+            }
+        }
+    </script>
+</body>
+
+</html>
