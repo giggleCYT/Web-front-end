@@ -12,6 +12,7 @@ body {
 }
 
 .box1 {
+    position: relative;
     width: 80px;
     height: 80px;
     margin-top: 50px;
@@ -21,20 +22,13 @@ body {
     box-shadow: -8px 0 7px -2px #fff, 0 -8px 7px -2px #fff, 0 8px 7px -2px rgb(195, 194, 194), 8px 0 7px -2px rgb(195, 194, 194);
 }
 
-.box1:hover {
-    box-shadow: -8px 0 7px -2px rgb(195, 194, 194) inset, 0 -8px 7px -2px rgb(195, 194, 194) inset, 0 8px 7px -2px #fff inset, 8px 0 7px -2px #fff inset;
+.box3 {
+    box-shadow: -4px 0 3px -1px #fff inset, 0 -4px 3px -1px #fff inset, 0 4px 3px -1px rgb(195, 194, 194) inset, 4px 0 3px -1px rgb(195, 194, 194) inset;
 }
 
-.box1:active {
-    box-shadow: -8px 0 7px -2px rgb(195, 194, 194) inset, 0 -8px 7px -2px rgb(195, 194, 194) inset, 0 8px 7px -2px #fff inset, 8px 0 7px -2px #fff inset;
-}
-
-.box2 {
-    width: 80px;
-    height: 80px;
-    margin-top: 50px;
-    margin-left: 60px;
-    float: left;
-    border-radius: 20px;
-    box-shadow: -8px 0 7px -2px #fff, 0 -8px 7px -2px #fff, 0 8px 7px -2px rgb(195, 194, 194), 8px 0 7px -2px rgb(195, 194, 194);
+img {
+    position: absolute;
+    width: 60px;
+    top: 10px;
+    left: 10px;
 }

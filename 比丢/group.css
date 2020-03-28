@@ -1,4 +1,13 @@
+.titler {
+    position: relative;
+    width: 300px;
+    height: 256px;
+    margin: auto;
+    margin-top: 30vh;
+}
+
 .head {
+    position: relative;
     width: 270px;
     height: 155px;
     margin: 0 auto;
@@ -45,7 +54,7 @@
 
 .mouth {
     background: none;
-    border: solid #673C63;
+    border: solid #7c4b00;
     border-radius: 0px;
     border-width: 0 5px 5px 0;
     display: inline-block;
@@ -55,20 +64,29 @@
     -webkit-transform: rotate(225deg) translate(50%, 65%);
 }
 
-
-/* .ears-one {
+.ears-one {
+    position: absolute;
     background-color: #fdc830;
     width: 20px;
     height: 30px;
-    left: 0;
+    left: 10px;
+    border: 5px solid #7c4b00;
+    border-radius: 50% 30%;
+    bottom: 0;
+    z-index: 1;
 }
 
 .ears-two {
+    position: absolute;
     background-color: #fdc830;
     width: 20px;
     height: 30px;
-    right: 0;
-} */
+    right: 10px;
+    border: 5px solid #7c4b00;
+    border-radius: 30% 50%;
+    bottom: 0;
+    z-index: 1;
+}
 
 .footer {
     position: relative;
@@ -136,12 +154,17 @@
     border-top: 0;
     border-radius: 50% 0 0 160%;
     background-color: #fdc830;
-    transform: rotate(10deg);
+    transform: rotate(13deg);
     z-index: 2;
 }
 
 .tail {
-    width: 50px;
-    height: 200px;
+    position: absolute;
+    right: 0px;
+    bottom: 0;
+    width: 100px;
+    height: 136px;
+    border: 5px solid #7c4b00;
+    border-radius: 50% 50% 50% 20%;
     background-color: #fdc830;
 }
