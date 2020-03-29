@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>用户首页</title>
+    <style>
+        div {
+            color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+    <p>欢迎您~</p>
+    <script>
+        var div = document.querySelector('div');
+        var user = location.search.substr(1);
+        // console.log(user);
+        var arr = user.split('=');
+        // console.log(arr);
+        div.innerHTML = arr[1];
+    </script>
+</body>
+
+</html>

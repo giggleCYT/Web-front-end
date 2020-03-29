@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>跳转页面</title>
+</head>
+
+<body>
+    <div></div>
+    <script>
+        var div = document.querySelector('div');
+        var time = 5;
+        looper();
+        setInterval(looper, 1000);
+
+        function looper() {
+            if (time == 0) {
+                location.href = 'http://cc.cccyt.cn/';
+            } else {
+                div.innerHTML = '你将在' + time + '秒后跳转至主页';
+                time--;
+            }
+        }
+    </script>
+</body>
+
+</html>

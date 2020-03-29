@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>停止定时器</title>
+</head>
+
+<body>
+    <button>停止爆炸</button>
+    <script>
+        var btn = document.querySelector('button');
+        var timer = setTimeout(function() {
+            alert('爆炸了！');
+        }, 3000);
+        btn.addEventListener('click', function() {
+            clearTimeout(timer);
+        })
+    </script>
+</body>
+
+</html>

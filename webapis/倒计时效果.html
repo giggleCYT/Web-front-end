@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>倒计时</title>
+    <style>
+        div {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        span {
+            background-color: #999;
+            padding: 30px;
+            font-size: 25px;
+            line-height: 60px;
+            margin: 5px;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <span class="hour">1</span>
+        <span class="minute">2</span>
+        <span class="second">3</span>
+    </div>
+    <script>
+        var hour = document.querySelector('.hour');
+        var minute = document.querySelector('.minute');
+        var second = document.querySelector('.second');
+        var inputtime = +new Date('2020-3-29 18:00:00');
+        countDown();
+        setInterval(countDown, 1000);
+
+        function countDown() {
+            var nowtime = +new Date();
+            var times = (inputtime - nowtime) / 1000;
+            var h = parseInt(times / 60 / 60 % 24);
+            h = h < 10 ? '0' + h : h;
+            hour.innerHTML = h;
+            var m = parseInt(times / 60 % 60);
+            m = m < 10 ? '0' + m : m;
+            minute.innerHTML = m;
+            var s = parseInt(times % 60);
+            s = s < 10 ? '0' + s : s;
+            second.innerHTML = s;
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>发送短信案例</title>
+</head>
+
+<body>
+    <input type="text"><button>发送</button>
+    <script>
+        var btn = document.querySelector('button');
+        var time = 5;
+        btn.addEventListener('click', function() {
+            btn.disabled = true;
+            var timer = setInterval(function() {
+                if (time == 0) {
+                    clearInterval(timer);
+                    btn.innerHTML = '发送';
+                    btn.disabled = false;
+                    time = 3;
+                } else {
+                    btn.innerHTML = '还剩下' + time + '秒';
+                    time--;
+                }
+            }, 1000);
+        })
+    </script>
+</body>
+
+</html>
