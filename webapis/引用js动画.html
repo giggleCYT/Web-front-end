@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>引用js动画</title>
+    <style>
+        .div {
+            position: fixed;
+            top: 50vh;
+            right: 0;
+            width: 60px;
+            height: 60px;
+            background-color: pink;
+            z-index: 1;
+        }
+        
+        span {
+            position: fixed;
+            top: 50vh;
+            right: 0;
+            width: 60px;
+            height: 60px;
+            background-color: pink;
+            font-size: 30px;
+            text-align: center;
+            line-height: 60px;
+            z-index: 1;
+        }
+        
+        .slider {
+            position: absolute;
+            width: 80px;
+            height: 60px;
+            text-align: center;
+            line-height: 60px;
+            z-index: 0;
+            background-color: pink;
+        }
+    </style>
+    <script src="move.js"></script>
+</head>
+
+<body>
+    <div class="div">
+        <span>←</span>
+        <div class="slider">问题反馈</div>
+    </div>
+    <script>
+        var div = document.querySelector('.div');
+        var span = document.querySelector('span');
+        var slider = document.querySelector('.slider');
+        div.addEventListener('mouseenter', function() {
+            move(slider, -80, function() {
+                span.innerHTML = '→';
+            });
+        });
+        div.addEventListener('mouseleave', function() {
+            move(slider, 0, function() {
+                span.innerHTML = '←';
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>放大镜</title>
+    <script src="big.js"></script>
+    <style>
+        .body {
+            position: relative;
+            width: 565px;
+            height: 378px;
+            border: 1px solid #999;
+            /* margin: 0 auto; */
+        }
+        
+        .mask {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 200px;
+            height: 200px;
+            background-color: rgb(226, 226, 77);
+            opacity: .5;
+            cursor: move;
+        }
+        
+        .big {
+            display: none;
+            position: absolute;
+            left: 570px;
+            top: 0;
+            width: 565px;
+            height: 378px;
+            border: 1px solid #999;
+            overflow: hidden;
+        }
+        
+        .img {
+            position: relative;
+            top: 0;
+            left: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="body">
+        <img src="big.jpg">
+        <div class="mask"></div>
+        <div class="big">
+            <img src="big1.jpg" class="img">
+        </div>
+    </div>
+</body>
+
+</html>

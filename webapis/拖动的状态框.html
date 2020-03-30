@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>拖动的状态框</title>
+    <style>
+        body {
+            background-color: white;
+        }
+        
+        .login-header {
+            position: absolute;
+            left: 740px;
+            top: 40px;
+            width: 50%;
+        }
+        
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+        
+        #link {
+            position: absolute;
+        }
+        
+        .login {
+            display: none;
+            position: relative;
+            width: 50%;
+            height: 50vh;
+            background: #fff;
+            margin: 100px auto;
+        }
+        
+        .login-input {
+            padding-bottom: 20px;
+        }
+        
+        .login-input label {
+            width: 50%;
+            padding-left: 250px;
+            text-align: right;
+            line-height: 35px;
+            height: 35px;
+            font-size: 14px;
+        }
+        
+        .login-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .login-button {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .login-title span {
+            position: absolute;
+            font-size: 12px;
+            right: -20px;
+            top: -20px;
+            background: #fff;
+            border: #ebebeb solid 1px;
+            width: 40px;
+            height: 40px;
+            border-radius: 20px;
+            line-height: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="login-header"> <a href="javascript:;" id="link">点我登录</a></div>
+    <div class="login">
+        <div class="login-title">登录会员
+            <span><a href="javascript:void(0);" id="closebtn">关闭</a></span>
+        </div>
+        <div class="login-input-content">
+            <div class="login-input">
+                <label>用户名：</label>
+                <input type="text" placeholder="请输入用户名" name="info[username]" class="username">
+            </div>
+            <div class="login-input">
+                <label>用户密码：</label>
+                <input type="password" placeholder="请输入用户密码" name="info[userpassword]" class="userpassword">
+            </div>
+            <div class="login-button"><a href="javascript:;" class="login-submit">登录</a></div>
+        </div>
+        <div class="login-bg"></div>
+    </div>
+    <script>
+        var login = document.querySelector('.login');
+        var body = document.querySelector('body');
+        var link = document.querySelector('#link');
+        var closebtn = document.querySelector('#closebtn');
+        var loginTitle = document.querySelector('.login-title');
+
+        link.addEventListener('click', function() {
+            login.style.display = 'block';
+            body.style.backgroundColor = '#999';
+        });
+        closebtn.addEventListener('click', function() {
+            login.style.display = 'none';
+            body.style.backgroundColor = 'white';
+        });
+        loginTitle.addEventListener('mousedown', function(e) {
+            var x = e.pageX - login.offsetLeft;
+            var y = e.pageY - login.offsetTop;
+            document.addEventListener('mousemove', move);
+
+            function move(e) {
+                login.style.left = e.pageX - x - 350 + 'px';
+                login.style.top = e.pageY - y - 100 + 'px';
+            }
+            document.addEventListener('mouseup', function() {
+                document.removeEventListener('mousemove', move);
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,62 @@
+.bodier {
+    position: relative;
+    width: 1000px;
+    height: 90%;
+    margin: 0 auto;
+}
+
+ul {
+    list-style: none;
+    width: 6000px;
+}
+
+li {
+    display: inline;
+}
+
+ul li img {
+    width: 1000px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.right {
+    display: none;
+    position: absolute;
+    top: 40vh;
+    right: -40px;
+    background-color: white;
+    opacity: .8;
+}
+
+.left {
+    display: none;
+    position: absolute;
+    left: 40px;
+    top: 40vh;
+    background-color: white;
+    opacity: .8;
+}
+
+.radius {
+    list-style: none;
+    position: absolute;
+    left: 540px;
+    top: 580px;
+}
+
+.current {
+    background-color: yellow!important;
+}
+
+.radius li {
+    float: left;
+    margin-left: 20px;
+    width: 20px;
+    height: 20px;
+    border: 0px;
+    border-radius: 50%;
+    background-color: lawngreen;
+}

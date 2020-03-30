@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>计算鼠标在盒子内的坐标</title>
+    <style>
+        div {
+            width: 60%;
+            height: 600px;
+            background-color: pink;
+            color: #999;
+            line-height: 600px;
+            text-align: center;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+    <script>
+        var div = document.querySelector('div');
+        div.addEventListener('mousemove', function(e) {
+            // console.log(e.pageX);
+            // console.log(e.pageY);
+            // console.log(this.offsetTop);
+            // console.log(this.offsetLeft);
+
+            var x = e.pageX - this.offsetLeft;
+            var y = e.pageY - this.offsetTop;
+            div.innerHTML = 'x轴的坐标是' + x + ',y轴的坐标是' + y;
+        })
+    </script>
+</body>
+
+</html>

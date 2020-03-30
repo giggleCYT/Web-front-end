@@ -1,36 +1,38 @@
 <!DOCTYPE html>
 <html>
-    <body>
-        <div id=app>
-            <img :src="imgArr[index]" alt="">
-            <a href="下一张"  v-show="index !=5" class="right" @click="xia">下一张</a>
-            <a href="上一张" v-show="index !=0" class="left" @click="qian">上一张</a>
-        </div>
-        <!-- 开发环境版本，包含了有帮助的命令行警告 -->
-        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-        <script>
+
+<body>
+    <div id="app">
+        <img :src="imgArr[index]" alt="">
+        <a href="下一张" v-show="index !=5" class="right" @click="xia">下一张</a>
+        <a href="上一张" v-show="index !=0" class="left" @click="qian">上一张</a>
+    </div>
+    <!-- 开发环境版本，包含了有帮助的命令行警告 -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
         var app = new Vue({
-            el:'#app',
-            data:{
-                imgArr:[
-                "img/layer1.jpg",
-                "img/layer2.jpg",
-                "img/layer3.jpg",
-                "img/layer4.jpg",
-                "img/layer5.jpg",
-                "img/layer6.jpg"
+            el: '#app',
+            data: {
+                imgArr: [
+                    "img/layer1.jpg",
+                    "img/layer2.jpg",
+                    "img/layer3.jpg",
+                    "img/layer4.jpg",
+                    "img/layer5.jpg",
+                    "img/layer6.jpg"
                 ],
-                index:0
+                index: 0
             },
-            methods:{
-                qian:function(){
-                    this.index --;
+            methods: {
+                qian: function() {
+                    this.index--;
                 },
-                xia:function(){
-                    this.index ++;
+                xia: function() {
+                    this.index++;
                 }
             }
         })
-        </script>
-    </body>
+    </script>
+</body>
+
 </html>

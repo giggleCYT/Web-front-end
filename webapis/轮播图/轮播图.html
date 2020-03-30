@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>轮播图</title>
+    <link rel="stylesheet" href="轮播图.css">
+    <!-- move.js必须放在轮播图.js前面 -->
+    <script src="move.js"></script>
+    <script src="轮播图.js"></script>
+</head>
+
+<body>
+    <div class="bodier">
+        <a href="#" class="right">→</a>
+        <a href="#" class="left">←</a>
+        <ul class="box">
+            <li><img src="layer1.jpg"></li>
+            <li><img src="layer2.jpg"></li>
+            <li><img src="layer3.jpg"></li>
+            <li><img src="layer4.jpg"></li>
+            <li><img src="layer5.jpg"></li>
+        </ul>
+        <ul class="radius">
+        </ul>
+    </div>
+    <!-- <script>
+        var left = this.document.querySelector('.left');
+
+        function move(obj, target, back) {
+            clearInterval(obj.timer);
+            obj.timer = setInterval(function() {
+                var temp = (target - obj.offsetLeft) / 10;
+                temp = temp > 0 ? Math.ceil(temp) : Math.floor(temp);
+                if (obj.offsetLeft == target) {
+                    clearInterval(obj.timer);
+                    if (back) {
+                        back();
+                    }
+                }
+                obj.style.left = obj.offsetLeft + temp + 'px';
+            }, 15);
+        }
+        move(left, 900, function() {
+            alert(1);
+        })
+    </script> -->
+</body>
+
+</html>

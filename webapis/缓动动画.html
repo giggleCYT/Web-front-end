@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>缓动动画</title>
+    <style>
+        div {
+            position: absolute;
+            top: 60px;
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="btn1">前进500</button>
+    <button class="btn2">前进900</button>
+    <div></div>
+    <script>
+        var btn1 = document.querySelector('.btn1');
+        var btn2 = document.querySelector('.btn2');
+        var div = document.querySelector('div');
+
+        function move(obj, target, back) {
+            clearInterval(obj.timer);
+            obj.timer = setInterval(function() {
+                var temp = (target - obj.offsetLeft) / 10;
+                temp = temp > 0 ? Math.ceil(temp) : Math.floor(temp);
+                if (obj.offsetLeft == target) {
+                    clearInterval(obj.timer);
+                    if (back) {
+                        back();
+                    }
+                }
+                obj.style.left = obj.offsetLeft + temp + 'px';
+            }, 15);
+        }
+        btn1.addEventListener('click', function() {
+            move(div, 500);
+        });
+        btn2.addEventListener('click', function() {
+            move(div, 900, function() {
+                div.style.backgroundColor = 'red';
+            });
+        })
+    </script>
+</body>
+
+</html>
