@@ -5,9 +5,10 @@ function move(obj, target, back) {
         temp = temp > 0 ? Math.ceil(temp) : Math.floor(temp);
         if (obj.offsetLeft == target) {
             clearInterval(obj.timer);
-            if (back) {
-                back();
-            }
+            // if (back) {
+            //     back();
+            // }
+            back && back();
         }
         obj.style.left = obj.offsetLeft + temp + 'px';
     }, 15);

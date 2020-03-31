@@ -6,8 +6,11 @@
 }
 
 ul {
+    position: relative;
     list-style: none;
-    width: 6000px;
+    width: 7000px;
+    z-index: 0;
+    overflow: hidden;
 }
 
 li {
@@ -29,6 +32,7 @@ a {
     right: -40px;
     background-color: white;
     opacity: .8;
+    z-index: 1;
 }
 
 .left {
@@ -38,6 +42,7 @@ a {
     top: 40vh;
     background-color: white;
     opacity: .8;
+    z-index: 1;
 }
 
 .radius {

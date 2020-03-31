@@ -77,7 +77,27 @@
                 span.style.display = 'none';
             }
 
-        })
+        });
+
+        function move(obj, target, back) {
+            clearInterval(obj.timer);
+            obj.timer = setInterval(function() {
+                var temp = (target - window.pageYOffset) / 10;
+                temp = temp > 0 ? Math.ceil(temp) : Math.floor(temp);
+                if (window.pageYOffset == target) {
+                    clearInterval(obj.timer);
+                    // if (back) {
+                    //     back();
+                    // }
+                    back && back();
+                }
+                // obj.style.left = window.pageYOffset + temp + 'px';
+                window.scroll(0, window.pageYOffset + temp);
+            }, 15);
+        }
+        span.addEventListener('click', function() {
+            move(window, 0);
+        });
     </script>
 </body>
 
