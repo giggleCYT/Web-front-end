@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>tab栏切换</title>
+    <style>
+        .tab {
+            position: relative;
+            width: 600px;
+            height: 200px;
+            margin: 0 auto;
+        }
+        
+        .two {
+            margin: 0 auto;
+            width: 200px;
+            height: 100px;
+        }
+        
+        .two div {
+            display: none;
+        }
+        
+        ul {
+            list-style: none;
+        }
+        
+        li {
+            display: inline-block;
+            line-height: 30px;
+            text-align: center;
+            width: 100px;
+            height: 30px;
+            background-color: rgb(226, 223, 223);
+        }
+        
+        .header {
+            background-color: red;
+            color: white;
+        }
+    </style>
+    <script src="jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="tab">
+        <div class="one">
+            <ul>
+                <li class="header">商品介绍</li>
+                <li>规格与包装</li>
+                <li>售后保障</li>
+                <li>商品评价</li>
+                <li>手机社区</li>
+            </ul>
+        </div>
+        <div class="two">
+            <div class="item" style="display: block;">商品介绍</div>
+            <div class="item">规格与包装</div>
+            <div class="item">售后保障</div>
+            <div class="item">商品评价</div>
+            <div class="item">手机社区</div>
+        </div>
+    </div>
+    <script>
+        $(function() {
+            $('.one li').click(function() {
+                $(this).addClass('header').siblings().removeClass('header');
+                var index = $(this).index();
+                $('.two .item').eq(index).show().siblings().hide();
+            })
+        })
+    </script>
+</body>
+
+</html>

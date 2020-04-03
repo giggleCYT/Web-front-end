@@ -44,7 +44,7 @@
             } else {
                 var li = document.createElement('li');
                 li.innerHTML = text.value + '<a herf = "javascript:;">删除<a>';
-                ul.insertBefore(li, ul.children[0])
+                ul.insertBefore(li, ul.children[0]);
                 var as = document.querySelectorAll('a');
                 for (var i = 0; i < as.length; i++) {
                     as[i].onclick = function() {

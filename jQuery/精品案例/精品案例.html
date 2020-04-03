@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>精品案例</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+            font-size: 12px;
+        }
+        
+        ul {
+            list-style: none;
+        }
+        
+        a {
+            text-decoration: none;
+        }
+        
+        .wrapper {
+            width: 250px;
+            height: 248px;
+            margin: 100px auto 0;
+            border: 1px solid pink;
+            border-right: 0;
+            overflow: hidden;
+        }
+        
+        #left,
+        #content {
+            float: left;
+        }
+        
+        #left li {
+            background: url(lili.jpg) repeat-x;
+        }
+        
+        #left li a {
+            display: block;
+            width: 48px;
+            height: 27px;
+            border-bottom: 1px solid pink;
+            line-height: 27px;
+            text-align: center;
+            color: black;
+        }
+        
+        #left li a:hover {
+            background-image: url(abg.gif);
+        }
+        
+        #content {
+            border-left: 1px solid pink;
+            border-right: 1px solid pink;
+        }
+        
+        #content img {
+            height: 248px;
+        }
+    </style>
+    <script src="../jquery.min.js"></script>
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <ul id="left">
+            <li><a href="#">伍六七</a></li>
+            <li><a href="#">梅花十三</a></li>
+            <li><a href="#">可乐</a></li>
+            <li><a href="#">鸡太保</a></li>
+            <li><a href="#">小飞</a></li>
+            <li><a href="#">师傅</a></li>
+            <li><a href="#">江惠莲</a></li>
+            <li><a href="#">斯坦国王子</a></li>
+            <li><a href="#">柒</a></li>
+        </ul>
+        <div id="content">
+            <div>
+                <a href="#"><img src="伍六七.png" width="200" height="250" /></a>
+            </div>
+            <div>
+                <a href="#"><img src="梅花十三.png" width="200" height="250" /></a>
+            </div>
+            <div>
+                <a href="#"><img src="可乐.png" width="200" height="250" /></a>
+            </div>
+            <div>
+                <a href="#"><img src="鸡太保.png" width="200" height="250" /></a>
+            </div>
+            <div>
+                <a href="#"><img src="小飞.png" width="200" height="250" /></a>
+            </div>
+            <div>
+                <a href="#"><img src="梅花十三的师傅.jpg" width="200" height="250" /></a>
+            </div>
+            <div>
+                <a href="#"><img src="江惠莲.png" width="200" height="250" /></a>
+            </div>
+            <div>
+                <a href="#"><img src="斯坦国王子.png" width="200" height="250" /></a>
+            </div>
+            <div>
+                <a href="#"><img src="柒.png" width="200" height="250" /></a>
+            </div>
+
+        </div>
+    </div>
+    <script>
+        $(function() {
+            $('#left li').mouseover(function() {
+                var index = $(this).index();
+                $('#content div').eq(index).show();
+                $('#content div').eq(index).siblings().hide();
+            })
+        })
+    </script>
+</body>
+
+</html>

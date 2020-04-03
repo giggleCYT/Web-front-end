@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>突出显示</title>
+    <style>
+        body {
+            background-color: #000;
+        }
+        
+        div {
+            padding-top: 20vh;
+            width: 450px;
+            height: 270px;
+            margin: 0 auto;
+        }
+        
+        ul {
+            list-style: none;
+        }
+        
+        li {
+            float: left;
+            margin: 0 10px 10px 0;
+        }
+    </style>
+    <script src="../jquery.min.js"></script>
+</head>
+
+<body>
+    <div>
+        <ul>
+            <li><img src="kn1.jpg"></li>
+            <li><img src="kn2.jpg"></li>
+            <li><img src="kn5.jpg"></li>
+            <li><img src="kn10.jpg"></li>
+            <li><img src="kn11.jpg"></li>
+            <li><img src="kn12.jpg"></li>
+        </ul>
+    </div>
+    <script>
+        $('li').hover(function() {
+            $(this).siblings().stop().fadeTo(200, 0.5);
+        }, function() {
+            $(this).siblings().stop().fadeTo(200, 1);
+        })
+    </script>
+</body>
+
+</html>
