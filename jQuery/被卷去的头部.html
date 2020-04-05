@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>仿淘宝固定侧边栏</title>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+        }
+        
+        .header {
+            width: 100%;
+            height: 200px;
+            background-color: #6a8caf;
+        }
+        
+        .bodier {
+            width: 100%;
+            background-color: #75b79e;
+            height: 500px;
+        }
+        
+        .footer {
+            width: 100%;
+            background-color: #a7e9af;
+            height: 100vh;
+        }
+        
+        .slider-bar {
+            display: none;
+            position: absolute;
+            top: 50vh;
+            right: 0;
+            width: 70px;
+            height: 100px;
+            background-color: #eef9bf;
+        }
+        
+        span {
+            position: relative;
+            top: 80px;
+        }
+    </style>
+    <script src="jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="slider-bar">
+        <span>返回顶部</span>
+    </div>
+    <div class="header"></div>
+    <div class="bodier"></div>
+    <div class="footer"></div>
+    <script>
+        $(function() {
+            var top = $('.bodier').offset().top;
+            console.log(top);
+
+            $(window).scroll(function() {
+                console.log($(document).scrollTop());
+
+                if ($(document).scrollTop() >= top) {
+                    $('.slider-bar').fadeIn();
+                } else {
+                    $('.slider-bar').fadeOut();
+                }
+            });
+            $('.slider-bar').on('click', function() {
+                $('body,html').stop().animate({
+                    scrollTop: 0
+                })
+            });
+        })
+    </script>
+</body>
+
+</html>
