@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>1</title>
+</head>
+
+<body>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+    </ul>
+    <script>
+        var lis = document.querySelectorAll('li');
+        for (var i = 0; i < lis.length; i++) {
+            (function(i) {
+                lis[i].onclick = function() {
+                    console.log(i);
+                }
+                setTimeout(function() {
+                    console.log(lis[i].innerHTML);
+
+                }, 3000)
+            })(i)
+        }
+    </script>
+</body>
+
+</html>

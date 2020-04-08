@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>4</title>
+</head>
+
+<body>
+    <script>
+        var data = [{
+            id: 1,
+            name: '妖精',
+            goods: [{
+                id: 11,
+                nname: '老君'
+            }, {
+                id: 22,
+                nname: '谛听'
+            }]
+        }, {
+            id: 2,
+            name: '无限',
+        }];
+
+        function fn(json, id) {
+            var o = {};
+            json.forEach(function(item) {
+                if (item.id == id) {
+                    o = item;
+                    return o;
+                } else if (item.goods && item.goods.length > 0) {
+                    o = fn(item.goods, id);
+                }
+            })
+            return o;
+        }
+
+        console.log(fn(data, 1));
+        console.log(fn(data, 2));
+    </script>
+</body>
+
+</html>

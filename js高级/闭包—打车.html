@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>1</title>
+</head>
+
+<body>
+    <script>
+        var car = (function() {
+            var start = 13; //起步价
+            var end = 0; //总价
+            return {
+                price: function(n) {
+                    if (n <= 3) {
+                        end = start;
+                    } else {
+                        end = start + (n - 3) * 5;
+                    }
+                    return end;
+                },
+                yd: function(flag) {
+                    return flag ? end + 10 : end;
+                }
+            }
+        })();
+        console.log(car.price(5));
+        console.log(car.yd(true));
+        console.log(car.price(2));
+        console.log(car.price(false));
+    </script>
+</body>
+
+</html>

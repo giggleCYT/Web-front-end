@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>5</title>
+</head>
+
+<body>
+    <script>
+        var data = {
+            id: 'pink',
+            num: [1, 5, 3, 7],
+            name: {
+                english: 22
+            }
+        }
+        var da = {}
+
+        function deepCode(newdata, olddata) {
+            for (var k in olddata) {
+                var item = olddata[k];
+                if (item instanceof Array) {
+                    newdata[k] = [];
+                    deepCode(da[k], item);
+                } else if (item instanceof Object) {
+                    newdata[k] = {}
+                    deepCode(da[k], item);
+                } else {
+                    newdata[k] = item;
+                }
+            }
+        }
+        deepCode(da, data);
+        console.log(da);
+    </script>
+</body>
+
+</html>
