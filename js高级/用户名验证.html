@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>用户名验证</title>
+    <style>
+        span {
+            color: #eee;
+        }
+        
+        .right {
+            color: green;
+        }
+        
+        .wrong {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text"><span>请输入用户名</span>
+    <script>
+        var input = document.querySelector('input');
+        var span = document.querySelector('span')
+        var reg = /^[a-zA-Z0-9_]{6,16}$/
+        input.onblur = function() {
+            if (reg.test(this.value)) {
+                span.className = 'right';
+                span.innerHTML = '用户名输入正确';
+            } else {
+                span.className = 'wrong';
+                span.innerHTML = '用户名输入不正确';
+            }
+        }
+    </script>
+</body>
+
+</html>
