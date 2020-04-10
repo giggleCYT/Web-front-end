@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>用户信息</title>
+    <style>
+        div {
+            position: relative;
+            display: flex;
+            justify-content: center;
+        }
+        
+        span {
+            color: red;
+        }
+        
+        label {
+            float: left;
+            width: 80px;
+            height: 20px;
+            text-align: right;
+        }
+        
+        input {
+            width: 250px;
+            height: 20px;
+            margin-left: 2px;
+            margin-bottom: 10px;
+        }
+        
+        .tab {
+            border: none;
+        }
+        
+        ul {
+            list-style: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <form>
+            <ul>
+                <li>
+                    <label for="">工号:</label>
+                    <input type="text" class="tab" value="F4101786" disabled>
+                </li>
+                <li>
+                    <label for="">姓名:</label>
+                    <input type="text" class="tab" value="支恒" disabled>
+                </li>
+                <li>
+                    <label for="">费用代码:</label>
+                    <input type="text" class="tab" value="TOS56106" disabled>
+                </li>
+                <li>
+                    <label for="">部门代码:</label>
+                    <input type="text" class="tab" value="TOS56106" disabled>
+                </li>
+                <li>
+                    <label for="">手机:</label>
+                    <input type="text" value="">
+                </li>
+                <li>
+                    <label for=""><span>*</span>分机:</label>
+                    <input type="text" value="560+26986">
+                    <span>格式：000+00000</span>
+                </li>
+                <li>
+                    <label for="">短号:</label>
+                    <input type="text" value="">
+                    <span>格式：000+00000</span>
+                </li>
+                <li>
+                    <label for="">邮箱:</label>
+                    <input type="text" value="hzlh-mac-zhiheng@mail.foxconn.com">
+                </li>
+            </ul>
+        </form>
+    </div>
+</body>
+
+</html>

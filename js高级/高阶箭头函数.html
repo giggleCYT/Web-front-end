@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>箭头函数</title>
+</head>
+
+<body>
+    <script>
+        const realNumberArray = [4, 5.6, -9.8, 3.14, 42, 6, 8.34];
+        const squareList = (arr) => {
+            "use strict";
+            // 在这行以下修改代码
+            const squaredIntegers = arr.filter((value) => value > 0 && value % parseInt(value) === 0).map((value) => Math.pow(value, 2));
+            // 在这行以上修改代码
+            return squaredIntegers;
+        };
+        // 测试你的代码
+        const squaredIntegers = squareList(realNumberArray);
+        console.log(squaredIntegers);
+    </script>
+</body>
+
+</html>
