@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>罗马数字转换器</title>
+</head>
+
+<body>
+    <script>
+        function convertToRoman(num) {
+            let thousand = Math.floor(num / 1000 % 10);
+            let hundred = Math.floor(num / 100 % 10);
+            let ten = Math.floor(num / 10 % 10);
+            let bit = Math.floor(num % 10);
+            let th = ['M', 'MM', 'MMM', 'MMMM', ' V'];
+            let h = ['C', 'CC', 'CCC', 'CD', 'D', 'DC', 'DCC', 'DCCC', 'CM'];
+            let t = ['X', 'XX', 'XXX', 'XL', 'L', 'LX', 'LXX', 'LXXX', 'XC'];
+            let b = ['I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX'];
+            let number = '';
+            fn(thousand, th);
+            fn(hundred, h);
+            fn(ten, t);
+            fn(bit, b);
+
+            function fn(n, m) {
+                if (n >= 1) {
+                    number += m[n - 1];
+                }
+                return number;
+            }
+            return number;
+
+        }
+        console.log(convertToRoman(16));
+    </script>
+</body>
+
+</html>
