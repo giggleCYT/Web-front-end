@@ -7,10 +7,16 @@
 </head>
 <script>
     function fn(str) {
-        let arr = [N, O, P, Q, R, S, T, U, V, W, S, Y, Z, A, B, C, D, E, F, G, H, I, J, K, L, M];
-        let arr1 = [A, B, C, D, E, F, J, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, S, Y, Z]
+        return str.replace(/\w/g, (s) => {
+            var code = s.charCodeAt();
+            if (code <= 77) {
+                return String.fromCharCode(code + 13);
+            } else {
+                return String.fromCharCode(code - 13);
+            }
+        })
     }
-    fn();
+    console.log(fn("AAA  CCC"));
 </script>
 
 </html>

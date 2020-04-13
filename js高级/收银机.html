@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>收银机</title>
+</head>
+
+<body>
+    <script>
+        function checkCashRegister(price, cash, cid) {
+            var change;
+            var money = cash - price;
+            var sum = 0;
+            cid.forEach(function(item) {
+                sum += (item[1] * 100);
+            })
+            sum = sum / 100;
+
+            if (sum < money) {
+                change = {
+                    status: "INSUFFICIENT_FUNDS",
+                    change: []
+                }
+            } else if (sum == money) {
+                change = {
+                    status: "CLOSED",
+                    change: cid
+                }
+            } else if (sum > money) {
+                var ch = [];
+                cid.some(function(item) {
+                    if (item[1] >= money) {
+                        return ch.push(item);
+                    } else
+                })
+                console.log(ch);
+                change = {
+                    status: "OPEN",
+                    change: []
+                }
+                change.change = ch
+            }
+            // console.log(change);
+            return change;
+
+        }
+        checkCashRegister(19.5, 20, [
+            ["PENNY", 1.01],
+            ["NICKEL", 2.05],
+            ["DIME", 3.1],
+            ["QUARTER", 4.25],
+            ["ONE", 90],
+            ["FIVE", 55],
+            ["TEN", 20],
+            ["TWENTY", 60],
+            ["ONE HUNDRED", 100]
+        ]);
+    </script>
+</body>
+
+</html>

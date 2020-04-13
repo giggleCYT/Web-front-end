@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>电话号码验证器</title>
+</head>
+
+<body>
+    <script>
+        function telephoneCheck(str) {
+            var matchStr = /^(((1(\s|))|)\([1-9]{3}\)(\s|-|)[1-9]{3}(\s|-|)[1-9]{4})$/;
+            var matchStr2 = /^(((1(\s)|)|)[1-9]{3}(\s|-|)[1-9]{3}(\s|-|)[1-9]{4})$/;
+            return (str.match(matchStr) != null || str.match(matchStr2) != null);
+        }
+        console.log(telephoneCheck("1 (555) 555-5555"));
+    </script>
+</body>
+
+</html>
