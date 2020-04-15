@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>入门</title>
+    <script src="vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <p>{{mag}}</p>
+        <p v-text="mag"></p>
+        <p v-html="mag1"></p>
+        <input type="button" value="提交" v-bind:title="mag2" v-on:click="show">
+        <a href="www.baidu.com" @click.prevent="link">百度一下</a>
+    </div>
+    <script>
+        var an = new Vue({
+            el: '#app',
+            data: {
+                mag: '欢迎学习vue',
+                mag1: '<h1>哈哈哈我是h1</h1>',
+                mag2: '啦啦啦~我是卖报的小行家'
+            },
+            methods: {
+                show: function() {
+                    alert('hello~')
+                },
+                link() {
+                    console.log("点击");
+
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

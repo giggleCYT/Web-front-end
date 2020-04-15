@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>跑马灯</title>
+    <script src="vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <input type="button" value="浪起来~" @click="lang">
+        <input type="button" value="别浪~" @click="stop">
+        <p>{{mag}}</p>
+    </div>
+    <script>
+        var vm = new Vue({
+            el: '#app',
+            data: {
+                mag: '猥琐发育，别浪~',
+                interval: null
+            },
+            methods: {
+                lang() {
+                    clearInterval(this.interval)
+                    this.interval = setInterval(() => {
+                        var start = this.mag.substring(0, 1);
+                        var end = this.mag.substring(1);
+                        this.mag = end + start;
+                    }, 400)
+                },
+                stop() {
+                    clearInterval(this.interval)
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>
