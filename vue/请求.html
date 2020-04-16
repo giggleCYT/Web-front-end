@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>请求</title>
+    <script src="vue.js"></script>
+    <script src="vue-resource-1.3.4.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <input type="button" value="get请求" @click="get">
+        <input type="button" value="post请求" @click="post">
+        <input type="button" value="jsonp请求" @click="jsonp">
+    </div>
+    <script>
+        var vm = new Vue({
+            el: "#app",
+            data: {},
+            methods: {
+                get() {
+                    this.$http.get('http://www.liulongbin.top:3005/api/getlunbo').then(function(result) {
+                        console.log(result)
+
+                    })
+                },
+                post() {
+                    this.$http.post('http://www.liulongbin.top:3005/api/post', {}, {
+                        emulateJSON: true
+                    }).then(function(result) {
+                        console.log(result)
+                    })
+                },
+                jsonp() {
+                    this.$http.jsonp('http://www.liulongbin.top:3005/api/jsonp').then(function(result) {
+                        console.log(result)
+                    })
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

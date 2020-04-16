@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>品牌列表案例</title>
+    <style>
+        tr {
+            width: 500px;
+            height: 50px;
+        }
+        
+        th {
+            border: 1px solid #999;
+        }
+        
+        input {
+            height: 30px;
+        }
+        
+        table {
+            margin-left: 20px;
+        }
+    </style>
+    <script src="vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <div>
+            <label>
+                ID:<input type="text" v-model="id">
+            </label>
+            <label>
+                NAME:<input type="text" v-model="name"  @keyup.enter="add">
+            </label>
+            <input type="button" value="添加" @click="add">
+            <label>
+                查询:<input type="text" v-model="keywords" v-focus v-color="'pink'">
+            </label>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>NAME</th>
+                    <th>TIME</th>
+                    <th>DELEATE</th>
+                </tr>
+            </thead>
+            <tbody v-for="item in search(keywords)">
+                <tr>
+                    <th> --{{ item.id }}-- </th>
+                    <th v-text="item.name"></th>
+                    <th>{{item.time|date(item.time)}}</th>
+                    <th>
+                        <a href="javascript:;" @click.prevent="del(item.id)">删除</a>
+                    </th>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <script>
+        Vue.filter('date', function(dates) {
+            dt = new Date(dates);
+            var n = dt.getFullYear().toString().padStart(2, "0");
+            var y = (dt.getMonth() + 1).toString().padStart(2, "0");
+            var r = dt.getDate().toString().padStart(2, "0");
+            var h = dt.getHours().toString().padStart(2, "0");
+            var m = dt.getMinutes().toString().padStart(2, "0");
+            var s = dt.getSeconds().toString().padStart(2, "0");
+            return `${n}-${y}-${r} ${h}:${m}:${s}`
+        });
+        Vue.directive('focus', {
+            bind: function(el) {
+
+            },
+            inserted: function(el) {
+                el.focus()
+            },
+            updated: function(el) {
+
+            }
+        })
+        Vue.directive('color', {
+            bind: function(el, binding) {
+                el.style.color = binding.value
+            }
+        })
+        var vm = new Vue({
+            el: '#app',
+            data: {
+                id: "",
+                name: '',
+                keywords: '',
+                list: [{
+                    id: 1,
+                    name: '犬夜叉',
+                    time: new Date()
+                }, {
+                    id: 2,
+                    name: '戈薇',
+                    time: new Date()
+                }, {
+                    id: 3,
+                    name: '杀生丸',
+                    time: new Date()
+                }]
+            },
+            methods: {
+                add() {
+                    var car = {
+                        id: this.id,
+                        name: this.name,
+                        time: new Date()
+                    }
+                    this.list.push(car);
+                    this.id = this.name = "";
+                },
+                del(id) {
+                    var index = this.list.findIndex(item => {
+                        if (item.id == id)
+                            return true;
+                    });
+                    this.list.splice(index, 1)
+                },
+                search(keywords) {
+                    return this.list.filter(item => {
+                        if (item.name.includes(keywords)) {
+                            return item;
+                        }
+                    })
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

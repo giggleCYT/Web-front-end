@@ -1,49 +1,66 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <meta charset="utf-8" />
-    <title>收银机</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 </head>
 
 <body>
     <script>
         function checkCashRegister(price, cash, cid) {
-            var change;
-            var money = cash - price;
-            var sum = 0;
-            cid.forEach(function(item) {
-                sum += (item[1] * 100);
-            })
-            sum = sum / 100;
+            var obj = {};
+            var num = 0;
+            var odd = cash - price;
+            var arr = [];
+            var money = [100, 20, 10, 5, 1, 0.25, 0.1, 0.05, 0.01];
 
-            if (sum < money) {
-                change = {
-                    status: "INSUFFICIENT_FUNDS",
-                    change: []
-                }
-            } else if (sum == money) {
-                change = {
+            var a = 0;
+            for (let i = 0; i < cid.length; i++) {
+                let o = cid[i][0];
+                obj[o] = cid[i][1];
+                num += cid[i][1];
+            }
+            if (odd === num) {
+                return {
                     status: "CLOSED",
                     change: cid
-                }
-            } else if (sum > money) {
-                var ch = [];
-                cid.some(function(item) {
-                    if (item[1] >= money) {
-                        return ch.push(item);
-                    }
-                })
-                console.log(ch);
-                change = {
-                    status: "OPEN",
-                    change: []
-                }
-                change.change = ch
+                };
             }
-            // console.log(change);
-            return change;
+            for (var j = 0; j < Object.keys(obj).length; j++) {
+                var name = Object.keys(obj)[8 - j];
 
+                change();
+
+
+                if (a > 0) {
+                    arr.push([name, money[j] * a]);
+                    a = 0;
+                }
+            }
+
+            function change() {
+                if (odd >= money[j] && obj[name] >= money[j]) {
+                    odd = odd - money[j];
+                    odd = Math.round(odd * 10000) / 10000;
+                    obj[name] = obj[name] - money[j];
+                    obj[name] = Math.round(obj[name]);
+                    a++;
+                    change();
+                }
+            }
+            if (odd === 0) {
+                return {
+                    status: "OPEN",
+                    change: arr
+                };
+            } else if (odd > 0) {
+                return {
+                    status: "INSUFFICIENT_FUNDS",
+                    change: []
+                };
+            }
         }
         checkCashRegister(19.5, 20, [
             ["PENNY", 1.01],
