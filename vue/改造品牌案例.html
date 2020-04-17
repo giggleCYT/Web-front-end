@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>改造品牌案例</title>
+    <link rel="stylesheet" href="../webapis/Bootstrap 轮播图/bootstrap.min.css">
+    <script src="vue.js"></script>
+    <script src="vue-resource-1.3.4.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h3 class="panel-title">添加品牌</h3>
+            </div>
+            <div class="panel-body form-inline">
+                <label>
+                    Name:<input type="text" v-model="name">
+                </label>
+                <input type="button" value="添加" @click="add" class="btn btn-primary">
+            </div>
+        </div>
+
+
+        <table class="table table-bordered table-hover table-striped">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Time</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr v-for="item in list">
+                    <td>{{item.id}}</td>
+                    <td>{{item.name}}</td>
+                    <td>{{item.time}}</td>
+                    <td>
+                        <a href="javascript:;" @click="del(item.id)">删除</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <script>
+        Vue.http.options.root = 'http://www.liulongbin.top:3005/';
+        var vm = new Vue({
+            el: "#app",
+            data: {
+                name: '',
+                list: []
+            },
+            created() {
+                this.getlist();
+            },
+            methods: {
+                add() {
+                    this.$http.post('api/addproduct/', {
+                        name: this.name
+                    }, {
+                        emulateJSON: true
+                    }).then(result => {
+                        var result = result.body;
+                        if (result.status === 0) {
+                            this.getlist();
+                            this.name = '';
+                        } else {
+                            alert('添加失败');
+                        }
+                    })
+                },
+                getlist() {
+                    this.$http.get('api/getprodlist/').then(result => {
+                        var result = result.body;
+                        if (result.status === 0) {
+                            this.list = result.message;
+                        } else {
+                            alert('请求错误')
+                        }
+                    })
+                },
+                del(id) {
+                    this.$http.get('api/delproduct/' + id).then(result => {
+                        if (result.body.status === 0) {
+                            this.getlist();
+                        } else {
+                            alert('删除失败');
+                        }
+                    }).catch(() => console.log('promise catch err'));
+                }
+            }
+
+        })
+    </script>
+</body>
+
+</html>

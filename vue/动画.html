@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>动画</title>
+    <script src="vue.js"></script>
+    <style>
+        .v-enter,
+        .v-leave-to {
+            opacity: 0;
+            transform: translateX(150px);
+        }
+        
+        .v-enter-active,
+        .v-leave-active {
+            transition: all 0.8s ease;
+        }
+        
+        .my-enter,
+        .my-leave-to {
+            opacity: 0;
+            transform: translateY(150px);
+        }
+        
+        .my-enter-active,
+        .my-leave-active {
+            transition: all 0.8s ease;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <input type="button" value="切换" @click="flag=!flag">
+        <transition>
+            <h3 v-if="flag">啦啦啦啦~</h3>
+        </transition>
+        <p>--------------------------------------------------</p>
+        <input type="button" value="切换~" @click="flag1=!flag1">
+        <transition name="my">
+            <h3 v-if="flag1">啦啦啦啦啦啦啦~</h3>
+        </transition>
+    </div>
+    <script>
+        var vm = new Vue({
+            el: "#app",
+            data: {
+                flag: false,
+                flag1: false
+            }
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>动画类库</title>
+    <script src="vue.js"></script>
+    <link rel="stylesheet" href="animate.css">
+</head>
+
+<body>
+    <div id="app">
+        <input type="button" value="切换" @click="flag=!flag">
+        <transition enter-active-class="bounceIn" leave-active-class="bounceOut" :duration="400">
+            <h3 v-if="flag" class="animated">啦啦啦啦~</h3>
+        </transition>
+    </div>
+    <script>
+        var vm = new Vue({
+            el: "#app",
+            data: {
+                flag: false
+            }
+        })
+    </script>
+</body>
+
+</html>

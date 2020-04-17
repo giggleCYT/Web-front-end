@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>改造品牌案例</title>
+    <link rel="stylesheet" href="animate.css">
+    <script src="vue.js"></script>
+    <style>
+        li {
+            border: 1px dashed salmon;
+            margin-left: 20px;
+            height: 50px;
+            width: 100%;
+            line-height: 50px;
+            font-size: 20px;
+        }
+        
+        li:hover {
+            background-color: hotpink;
+            transition: all 0.8s ease;
+        }
+        
+        label {
+            margin-left: 50px;
+        }
+        
+        .v-enter,
+        .v-leave-to {
+            opacity: 0;
+            transform: translateY(80px);
+        }
+        
+        .v-enter-active,
+        .v-leave-active {
+            transition: all 0.8s ease;
+        }
+        
+        .v-move {
+            transition: all 0.8s ease;
+        }
+        
+        .v-leave-active {
+            position: absolute;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <div>
+            <label>
+              Id:
+              <input type="text" v-model="id">
+            </label>
+
+            <label>
+              Name:
+              <input type="text" v-model="name">
+            </label>
+
+            <input type="button" value="添加" @click="add">
+        </div>
+
+        <ul>
+            <transition-group>
+                <li v-for="(item,i) in list" :key="item.id" @click="del(i)">
+                    -----{{item.id}}-----{{item.name}}
+                </li>
+            </transition-group>
+        </ul>
+    </div>
+    <script>
+        var vm = new Vue({
+            el: "#app",
+            data: {
+                id: '',
+                name: '',
+                list: [{
+                    id: 1,
+                    name: '犬夜叉'
+                }, {
+                    id: 2,
+                    name: '戈薇',
+                }, {
+                    id: 3,
+                    name: '杀生丸'
+                }]
+            },
+            methods: {
+                add() {
+                    this.list.push({
+                            id: this.id,
+                            name: this.name
+                        }),
+                        this.id = this.name = ''
+                },
+                del(i) {
+                    this.list.splice(i, 1)
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>
