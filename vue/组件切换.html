@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>组件切换</title>
+    <script src="vue.js"></script>
+    <style>
+        .v-enter,
+        .v-leave-to {
+            opacity: 0;
+            transform: translateX(50px);
+        }
+        
+        .v-enter-active,
+        .v-leave-active {
+            transition: all 0.5s ease;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <a href="" @click.prevent="conName='login'">登录</a>
+        <a href="" @click.prevent="conName='registered'">注册</a>
+        <transition mode="out-in">
+            <component :is="conName"></component>
+        </transition>
+    </div>
+    <script>
+        Vue.component('login', {
+            template: "<h3>登录页面</h3>"
+        })
+        Vue.component('registered', {
+            template: "<h3>注册页面</h3>"
+        })
+        var vm = new Vue({
+            el: '#app',
+            data: {
+                conName: ''
+            },
+            methods: {
+
+            }
+        })
+    </script>
+</body>
+
+</html>
