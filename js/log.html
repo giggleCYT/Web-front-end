@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>log</title>
+</head>
+
+<body>
+    <script>
+        console.log('test start')
+        var promise = new Promise(function(resolve, reject) {
+            console.log('promise start');
+            resolve('testing');
+            console.log('promise end');
+        })
+        promise.then(function(value) {
+            console.log(value);
+        })
+        console.log('test end');
+    </script>
+</body>
+
+</html>

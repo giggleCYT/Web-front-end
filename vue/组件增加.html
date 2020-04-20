@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>组件增加</title>
+    <script src="vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <con></con>
+        <p>-------------</p>
+        <con></con>
+        <p>-------------</p>
+        <con></con>
+    </div>
+    <template id="add">
+        <div>
+        <input type="button" value="+1" @click="add1">
+        <h3>{{msg}}</h3>
+    </div>
+    </template>
+    <script>
+        Vue.component('con', {
+            template: '#add',
+            data: function() {
+                return {
+                    msg: 0
+                }
+            },
+            methods: {
+                add1() {
+                    this.msg++
+                }
+            }
+        })
+        var vm = new Vue({
+            el: '#app',
+            data: {}
+
+        })
+    </script>
+</body>
+
+</html>

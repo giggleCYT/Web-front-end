@@ -63,13 +63,13 @@
             <input type="button" value="添加" @click="add">
         </div>
 
-        <ul>
-            <transition-group>
-                <li v-for="(item,i) in list" :key="item.id" @click="del(i)">
-                    -----{{item.id}}-----{{item.name}}
-                </li>
-            </transition-group>
-        </ul>
+        <!-- <ul> -->
+        <transition-group appear tag="ul">
+            <li v-for="(item,i) in list" :key="item.id" @click="del(i)">
+                -----{{item.id}}-----{{item.name}}
+            </li>
+        </transition-group>
+        <!-- </ul> -->
     </div>
     <script>
         var vm = new Vue({
