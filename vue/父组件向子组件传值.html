@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>父组件向子组件传值</title>
+    <script src="vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <con v-bind:mycon="msg" @my="show"></con>
+    </div>
+    <script>
+        var vm = new Vue({
+            el: '#app',
+            data: {
+                msg: '我是小飞象'
+            },
+            methods: {
+                show(data) {
+                    console.log('abcd' + data);
+                }
+            },
+            components: {
+                con: {
+                    template: '<div><h3>大家好------{{mycon}}</h3><input type="button" value="click" @click="myshow"></div>',
+                    props: ['mycon'],
+                    methods: {
+                        myshow() {
+                            this.$emit('my', '爱你')
+                        }
+                    }
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>
