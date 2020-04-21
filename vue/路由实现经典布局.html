@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>路由实现经典布局</title>
+    <script src="vue.js"></script>
+    <script src="vue-router v3.1.6.js"></script>
+    <style>
+        .header {
+            background-color: pink;
+            height: 100px;
+        }
+        
+        h1,
+        h2 {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .conter {
+            display: flex;
+            height: 600px;
+        }
+        
+        .left {
+            background-color: plum;
+            flex: 2;
+        }
+        
+        .main {
+            background-color: powderblue;
+            flex: 8;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <router-view></router-view>
+        <div class="conter">
+            <router-view name="left"></router-view>
+            <router-view name="main"></router-view>
+        </div>
+    </div>
+    <script>
+        var header = {
+            template: '<h1 class="header">header</h1>'
+        }
+        var left = {
+            template: '<h2 class="left">left</h2>'
+        }
+        var main = {
+            template: '<h2 class="main">main</h2>'
+        }
+        var routerObj = new VueRouter({
+            routes: [{
+                path: '/',
+                components: {
+                    'default': header,
+                    'left': left,
+                    'main': main
+                }
+            }]
+        })
+        var vm = new Vue({
+            el: '#app',
+            data: {},
+            router: routerObj
+        })
+    </script>
+</body>
+
+</html>

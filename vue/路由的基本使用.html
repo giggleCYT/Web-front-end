@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>路由的基本使用</title>
+    <script src="vue.js"></script>
+    <script src="vue-router v3.1.6.js"></script>
+    <style>
+        .router-link-active {
+            border: 2px solid #7e7979;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <!-- <a href="#/login">登录</a>
+        <a href="#/register">注册</a> -->
+
+        <router-link to="/login?id=10&name=andy" tag="span">登录</router-link>
+        <router-link to="/register">注册</router-link>
+        <router-view></router-view>
+    </div>
+    <script>
+        var login = {
+            template: '<h2>登录页面----{{$route.query.id}}----{{$route.query.name}}</h2>'
+        }
+        var register = {
+            template: '<h2>注册页面</h2>'
+        }
+        var routerObj = new VueRouter({
+            routes: [{
+                path: '/',
+                redirect: '/login'
+            }, {
+                path: '/login',
+                component: login
+            }, {
+                path: '/register',
+                component: register
+            }]
+        })
+        var vm = new Vue({
+            el: '#app',
+            data: {},
+            methods: {},
+            router: routerObj
+        })
+    </script>
+</body>
+
+</html>
