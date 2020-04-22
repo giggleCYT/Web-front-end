@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>wacth</title>
+    <script src="vue.js"></script>
+    <script src="vue-router v3.1.6.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <router-link to="/login">登录</router-link>
+        <router-link to="/register">注册</router-link>
+        <router-view></router-view>
+    </div>
+    <script>
+        var login = {
+            template: '<h3>这是登录页面</h3>'
+        }
+        var register = {
+            template: '<h3>这是注册页面</h3>'
+        }
+        var router = new VueRouter({
+            routes: [{
+                path: '/',
+                redirect: '/login'
+            }, {
+                path: '/login',
+                component: login
+            }, {
+                path: '/register',
+                component: register
+            }]
+        })
+        var vm = new Vue({
+            el: '#app',
+            data: {},
+            router,
+            watch: {
+                '$route.path': function(newVal) {
+                    // console.log(newVal);
+                    if (newVal === '/login') {
+                        alert("欢迎来到登录页面")
+                    } else if (newVal === '/register') {
+                        alert("欢迎来到注册页面")
+                    }
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>
