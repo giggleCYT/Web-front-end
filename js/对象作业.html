@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <script>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>六个小作业</title>
+    <script>
         // var obj = {
         //     color : 'break',
         //     zhongliang : '0.45kg',
@@ -51,7 +55,7 @@
         //     return b;
         // }
         // console.log(a(arr));
-        
+
         // var n = prompt('请输入数组：');
         // var arr = n.split(',');
         // for(var i = 0;i<=arr.length;i++){
@@ -64,37 +68,38 @@
         //     }
         // }
         // console.log(arr);
-        while(option!='5') {
-        var option=prompt('欢迎使用简易计算器：\n1.加法运算\n2.减法运算\n3.乘法运算\n4.除法运算\n5.退出');
-                switch(option){
-                    case '1': 
-                    var sav=parseInt(prompt('请输入一个数:'));
-                    var save=parseInt(prompt('请输入一个数:'));
-                    var sum=sav + save;
-                    alert('您的结果为：'+sum);
+        while (option != '5') {
+            var option = prompt('欢迎使用简易计算器：\n1.加法运算\n2.减法运算\n3.乘法运算\n4.除法运算\n5.退出');
+            switch (option) {
+                case '1':
+                    var sav = parseInt(prompt('请输入一个数:'));
+                    var save = parseInt(prompt('请输入一个数:'));
+                    var sum = sav + save;
+                    alert('您的结果为：' + sum);
                     break;
-                    case '2': 
-                    var s=parseInt(prompt('请输入一个数:'));
-                    var sa=parseInt(prompt('请输入一个数:'));
-                    var j=s-sa;
-                    alert('您的结果为：'+j);
+                case '2':
+                    var s = parseInt(prompt('请输入一个数:'));
+                    var sa = parseInt(prompt('请输入一个数:'));
+                    var j = s - sa;
+                    alert('您的结果为：' + j);
                     break;
-                    case '3': 
-                    var q=parseInt(prompt('请输入一个数:'));
-                    var qq=parseInt(prompt('请输入一个数:'));
-                    var x=q*qq;
-                    alert('您的结果为:'+x);
+                case '3':
+                    var q = parseInt(prompt('请输入一个数:'));
+                    var qq = parseInt(prompt('请输入一个数:'));
+                    var x = q * qq;
+                    alert('您的结果为:' + x);
                     break;
-                    case'4':
-                    var cc=parseInt(prompt('请输入一个数:'));
-                    var ccc=parseInt(prompt('请输入一个数:'));
-                    var c=cc/ccc;
-                    alert('您的结果为：'+c);
-                    case '5': 
+                case '4':
+                    var cc = parseInt(prompt('请输入一个数:'));
+                    var ccc = parseInt(prompt('请输入一个数:'));
+                    var c = cc / ccc;
+                    alert('您的结果为：' + c);
+                case '5':
                     alert('您正在退出...');
                     break;
-                }
             }
-        </script>
-    </head>
+        }
+    </script>
+</head>
+
 </html>

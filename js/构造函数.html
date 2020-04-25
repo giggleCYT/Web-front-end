@@ -1,31 +1,30 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <script>
-        function a(uname,type,blood) {
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>构造函数</title>
+    <script>
+        function a(uname, type, blood) {
             this.name = uname;
             this.sx = type;
             this.xl = blood;
-            this.gj = function(attack){
+            this.gj = function(attack) {
                 console.log(attack);
             }
         }
-        var lp = new a('廉颇','力量型','500血量');
+        var lp = new a('廉颇', '力量型', '500血量');
         console.log(lp.name);
         console.log(lp.sx);
         console.log(lp.xl);
         lp.gj("近战");
-        var hy = new a('后羿','射手型','100血量');
+        var hy = new a('后羿', '射手型', '100血量');
         console.log(hy.name);
         console.log(hy.sx);
         console.log(hy.xl);
         hy.gj('远程');
-        
-        
-        
-        
-        
-        
-        </script>
-    </head>
+    </script>
+</head>
+
 </html>

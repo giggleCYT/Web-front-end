@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>函数</title>
+    <script>
+        // var num = prompt('选择以下任意算数运算：\n' + '1.加法\n' + '2.减法\n' + '3.乘法\n' + '4.除法\n');
+        // while (num <= 4 && num > 0) {
+        //     function getResult() {
+        //         var num1 = prompt('输入第一个数');
+        //         var num2 = prompt('输入第二个数');
+        //         switch (num) {
+        //             case '1':
+        //             return parseFloat(num1) + parseFloat(num2);
+        //             break;
+        //             case '2':
+        //             return parseFloat(num1) - parseFloat(num2);
+        //             break;
+        //             case '3':
+        //             return parseFloat(num1) * parseFloat(num2);
+        //             break;
+        //             case '4':
+        //             return parseFloat(num1) / parseFloat(num2);
+        //             break;
+        //             }
+        //             }
+        //             var result = getResult();
+        //             alert('结果是：' + result);
+        //             }
+        //             alert('没有此选项');
+
+        // function max(){
+        //     var num1 = prompt("输入第一个数");
+        //     var num2 = prompt("输入第二个数");
+        //     if(num1 >= num2){
+        //         alert(num1);
+        //     }else{
+        //         alert(num2);
+        //     }
+
+        // }
+        // alert(max());
+
+        function ss() {
+            var num = prompt("请输入需要判断的数")
+            for (var i = 2; i < num; i++) {
+                if (num % i !== 0) {
+                    alert("您输入的数是素数")
+                } else {
+                    alert("您输入的数不是素数")
+                }
+            }
+        }
+        alert(ss());
+    </script>
+</head>
+
+</html>
