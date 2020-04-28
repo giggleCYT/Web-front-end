@@ -1,0 +1,24 @@
+{
+    "name": "loader",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "dev": "webpack-dev-server --open --port 5000 --contentBase src --hot"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "jquery": "^3.5.0"
+    },
+    "devDependencies": {
+        "css-loader": "^3.5.3",
+        "html-webpack-plugin": "^4.2.0",
+        "style-loader": "^1.2.0",
+        "webpack": "^4.43.0",
+        "webpack-cli": "^3.3.11",
+        "webpack-dev-server": "^3.10.3"
+    }
+}
