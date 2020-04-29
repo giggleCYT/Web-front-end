@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 1.
+        div {
+            width: 200px;
+            height: 200px;
+            margin: 0 auto;
+            background-color: pink;
+        } */
+        /* 2.
+        div {
+            position: absolute;相对定位也可
+            width: 200px;
+            height: 200px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: pink;
+        } */
+        /* 3.
+        div {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            margin: auto;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            background-color: pink;
+        } */
+        /* 4.
+        div {
+            position: absolute;
+            width: 400px;
+            height: 200px;
+            top: 50%;
+            left: 50%;
+            margin: -100px 0 0 -200px;
+            background-color: pink;
+        } */
+        /* 5.
+        .container {
+            background-color: pink;
+            text-align: center;
+            font-size: 0;
+        }
+        .box {
+            display: inline-block;
+            width: 500px;
+            height: 300px;
+            background-color: plum;
+        } */
+        /* 6.
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        } */
+        
+        .container {
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: rgba(0, 0, 0, 0.5);
+            text-align: center;
+            font-size: 0;
+            white-space: nowrap;
+            overflow: auto;
+        }
+        
+        .container::after {
+            content: "";
+            display: inline-block;
+            height: 100%;
+            vertical-align: middle;
+        }
+        
+        .box {
+            display: inline-block;
+            width: 500px;
+            height: 400px;
+            background-color: pink;
+            white-space: normal;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 1. -->
+    <div></div>
+    <!-- 2. -->
+    <div class="container">
+        <div class="box"></div>
+    </div>
+</body>
+
+</html>

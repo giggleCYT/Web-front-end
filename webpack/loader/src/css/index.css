@@ -1,7 +1,28 @@
 ul {
     list-style: none;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    text-align: center;
 }
 
 li {
     color: palevioletred;
+}
+
+input {
+    width: 150px;
+    height: 40px;
+    margin-left: 45%;
+    font-size: 30px;
+}
+
+::placeholder {
+    color: pink;
+}
+
+.image {
+    width: 500px;
+    height: 500px;
+    background: url(../images/1.jpg);
 }
