@@ -112,8 +112,6 @@ export default {
                 return this.$message.error('获取权限数据失败')
             }
             this.rightsList=res.data
-            console.log(this.rightsList);
-            console.log(this.defKeys);
             
             this.getLeafKeys(role,this.defKeys)
             this.setRightDialogVisible=true
