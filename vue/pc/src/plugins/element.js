@@ -25,7 +25,10 @@ import {
     Pagination,
     Dialog,
     MessageBox,
-    Tag
+    Tag,
+    Tree,
+    Select,
+    Option
 } from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 
@@ -53,5 +56,8 @@ Vue.use(Tooltip)
 Vue.use(Pagination)
 Vue.use(Dialog)
 Vue.use(Tag)
+Vue.use(Tree)
+Vue.use(Select)
+Vue.use(Option)
 Vue.prototype.$message = Message
 Vue.prototype.$confirm = MessageBox.confirm
