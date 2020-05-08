@@ -52,7 +52,7 @@
         </el-dialog>
 
         <el-dialog title="编辑分类信息" :visible.sync="showDV" width="50%" @close="editDialogVisibleClose">
-            <el-form :model="editForm" :rules="editFormRules" ref="editRuleFormRef" label-width="70px">
+            <el-form :model="editForm" :rules="editFormRules" ref="editRuleFormRef" label-width="100px">
                 <el-form-item label="分类名称" prop="cat_name">
                     <el-input v-model="editForm.cat_name"></el-input>
                 </el-form-item>
