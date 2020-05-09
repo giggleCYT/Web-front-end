@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="vue.js"></script>
+    <script src="vue-resource-1.3.4.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <button @click="happy">按钮</button>
+        <span>{{result}}</span>
+    </div>
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data() {
+                return {
+                    result: ''
+                }
+            },
+            methods: {
+                async happy() {
+                    const {
+                        data: res
+                    } = await this.$http.get('https://v1.alapi.cn/api/qinghua')
+                    this.result = res.data.content
+                    console.log(res);
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>
