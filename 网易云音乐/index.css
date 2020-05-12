@@ -1,0 +1,360 @@
+html,
+body {
+    padding: 0;
+    margin: 0;
+    font-size: 0;
+    background-color: rgb(221, 221, 221);
+}
+
+.header {
+    background-color: #242424;
+    color: beige;
+}
+
+.division {
+    height: 35px;
+    background-color: #c20c0c;
+}
+
+.body-head {
+    background-color: rgb(97, 72, 97);
+}
+
+.body-body {
+    height: 600px;
+    width: 984px;
+    background-color: white;
+    margin: 0 auto;
+    position: relative;
+}
+
+.footer {
+    height: 173px;
+    background-color: powderblue;
+}
+
+.logo {
+    height: 70px;
+    width: 150px;
+    margin: 0 0 0 180px;
+    display: inline-block;
+    cursor: pointer;
+    line-height: 70px;
+}
+
+.logo a {
+    font-size: 22px
+}
+
+.logo span {
+    /* display: inline-block; */
+    color: #c20c0c;
+    font-size: 22px;
+    padding: 2px;
+    border: 1px solid #c20c0c;
+}
+
+ul {
+    display: inline-block;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul li {
+    display: inline-block;
+}
+
+.header ul li {
+    padding: 0 20px;
+    cursor: pointer;
+    height: 70px;
+    position: relative;
+    text-align: center;
+    line-height: 70px;
+    font-size: 15px;
+}
+
+.header ul li:last-child {
+    height: 74px;
+}
+
+.hot {
+    background-color: #c20c0c;
+    border-radius: 5px;
+    margin-left: -10px;
+    font-size: 12px;
+    z-index: 2;
+}
+
+.search {
+    top: 0;
+    height: 70px;
+    margin-left: 40px;
+    display: inline-block;
+    position: absolute;
+    width: 350px;
+    line-height: 70px;
+}
+
+.search span {
+    position: absolute;
+    left: 10px;
+    color: gray;
+}
+
+.search input {
+    padding-left: 30px;
+    height: 32px;
+    width: 158px;
+    border-radius: 20px;
+    border: 0;
+    outline: none;
+    margin-top: 19px;
+}
+
+.header .creation {
+    position: absolute;
+    top: 19px;
+    width: 90px;
+    display: inline-block;
+    height: 32px;
+    border: 1px solid gray;
+    text-align: center;
+    line-height: 32px;
+    border-radius: 20px;
+    margin: 0 19px;
+    color: rgb(199, 195, 195);
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.header .search .creation:hover {
+    color: beige;
+    border-color: beige;
+}
+
+.header .search a {
+    position: absolute;
+    right: 0;
+    color: gray;
+    font-size: 14px;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.header .search a:hover {
+    color: rgb(199, 195, 195);
+}
+
+.triangle {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border: 5px solid;
+    border-color: transparent transparent #c20c0c transparent;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin-left: -6px;
+}
+
+.nav {
+    width: 1100px;
+    margin: 0 auto;
+}
+
+.nav ul {
+    margin-left: 124px;
+}
+
+.nav ul li {
+    height: 21px;
+    text-align: center;
+    line-height: 17px;
+    margin: 7px 27px;
+    color: beige;
+    font-size: 13px;
+    padding: 0 10px;
+}
+
+.nav-close {
+    background-color: #830505;
+    border-radius: 20px;
+}
+
+.close {
+    background-color: #000000;
+}
+
+.figure {
+    width: 1100px;
+    height: 285px;
+    margin: 0 auto;
+    color: beige;
+    position: relative;
+}
+
+.figure .carousel {
+    display: inline-block;
+    width: 730px;
+    margin-left: 58px;
+}
+
+.carousel img {
+    width: 730px;
+    height: 285px;
+}
+
+.carousel ul {
+    left: 100px;
+    position: absolute;
+    bottom: 10px;
+}
+
+.carousel ul li {
+    width: 3px;
+    height: 3px;
+    border: 1px solid rgb(202, 202, 202);
+    margin: 10px;
+    border-radius: 50px;
+    background-color: rgb(202, 202, 202);
+}
+
+.carousel .figure-close {
+    background-color: #c20c0c;
+    border-color: #c20c0c;
+}
+
+.down {
+    display: inline-block;
+    width: 254px;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.down img {
+    width: 254px;
+    height: 100%;
+}
+
+.left,
+.rigth {
+    display: inline-block;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 40px;
+    width: 30px;
+    height: 40px;
+    border: 1px solid beige;
+    border-radius: 20px;
+    position: absolute;
+    top: 50%;
+}
+
+.left {
+    left: 0;
+}
+
+.rigth {
+    right: 0;
+}
+
+.body-body .body-left {
+    position: absolute;
+    display: inline-block;
+    width: 730px;
+}
+
+.body-body .body-right {
+    position: absolute;
+    display: inline-block;
+    width: 254px;
+    right: 0;
+}
+
+.body-body p {
+    display: inline-block;
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.circle {
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    border: 5px solid #c20c0c;
+    border-radius: 50px;
+    margin-left: 50px;
+    margin-right: 10px;
+}
+
+.body-header a {
+    /* text-decoration: none; */
+    font-size: 15px;
+    color: rgb(68, 68, 68);
+    padding-right: 10px;
+}
+
+.body-header ul li {
+    font-size: 15px;
+    margin-left: 10px;
+}
+
+.body-header span {
+    float: right;
+    padding-top: 10px;
+    padding-right: 20px;
+}
+
+.body-header span a {
+    padding: 0;
+}
+
+.body-header span p {
+    font-size: 15px;
+    color: #c20c0c;
+}
+
+.solid {
+    width: 95%;
+    height: 0;
+    border: 2px solid #c20c0c;
+    margin: 0 auto;
+}
+
+.login {
+    height: 126px;
+    /* width: 254px; */
+    background-color: rgb(207, 207, 207);
+    color: rgb(126, 125, 125);
+}
+
+.login p {
+    font-size: 13px;
+    margin: 20px;
+}
+
+.login div {
+    font-size: 13px;
+    width: 100px;
+    color: beige;
+    height: 31px;
+    text-align: center;
+    line-height: 31px;
+    background-color: #c20c0c;
+    margin: 0 auto;
+    border-radius: 5px;
+}
+
+.login div:hover {
+    background-color: #e40d0d;
+}
