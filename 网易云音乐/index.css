@@ -6,6 +6,10 @@ body {
     background-color: rgb(221, 221, 221);
 }
 
+p {
+    margin: 0;
+}
+
 .header {
     background-color: #242424;
     color: beige;
@@ -21,38 +25,47 @@ body {
 }
 
 .body-body {
-    height: 600px;
+    height: 1480px;
     width: 984px;
     background-color: white;
     margin: 0 auto;
+    border: 1px solid #c2c2c2;
+    border-left: none;
     position: relative;
 }
 
 .footer {
+    border-top: 1px solid #c2c2c2;
     height: 173px;
-    background-color: powderblue;
 }
 
-.logo {
+h1 {
     height: 70px;
-    width: 150px;
-    margin: 0 0 0 180px;
+    /* width: 150px; */
+    margin: 0 10px 0 240px;
     display: inline-block;
     cursor: pointer;
-    line-height: 70px;
 }
 
-.logo a {
-    font-size: 22px
+h1 a {
+    color: beige;
 }
 
-.logo span {
+h1 span {
     /* display: inline-block; */
-    color: #c20c0c;
+    margin: 0;
     font-size: 22px;
-    padding: 2px;
-    border: 1px solid #c20c0c;
+    line-height: 70px;
+    text-align: center;
+    float: right;
 }
+
+
+/* .logo span {
+    display: inline-block;
+    color: #c20c0c;
+    height: 70px;
+} */
 
 ul {
     display: inline-block;
@@ -63,6 +76,10 @@ ul {
 
 ul li {
     display: inline-block;
+}
+
+.header ul {
+    position: absolute;
 }
 
 .header ul li {
@@ -89,6 +106,7 @@ ul li {
 
 .search {
     top: 0;
+    right: 240px;
     height: 70px;
     margin-left: 40px;
     display: inline-block;
@@ -143,6 +161,7 @@ ul li {
 
 a {
     text-decoration: none;
+    cursor: pointer;
 }
 
 a:hover {
@@ -182,6 +201,7 @@ a:hover {
     color: beige;
     font-size: 13px;
     padding: 0 10px;
+    cursor: pointer;
 }
 
 .nav-close {
@@ -272,6 +292,8 @@ a:hover {
     position: absolute;
     display: inline-block;
     width: 730px;
+    height: 100%;
+    border: 1px solid #c9c9c9;
 }
 
 .body-body .body-right {
@@ -285,6 +307,8 @@ a:hover {
     display: inline-block;
     font-size: 20px;
     margin-right: 10px;
+    margin-bottom: 10px;
+    margin-top: 20px;
 }
 
 .circle {
@@ -293,7 +317,7 @@ a:hover {
     height: 5px;
     border: 5px solid #c20c0c;
     border-radius: 50px;
-    margin-left: 50px;
+    margin-left: 25px;
     margin-right: 10px;
 }
 
@@ -317,6 +341,10 @@ a:hover {
 
 .body-header span a {
     padding: 0;
+}
+
+.body-header p {
+    cursor: pointer;
 }
 
 .body-header span p {
@@ -357,4 +385,371 @@ a:hover {
 
 .login div:hover {
     background-color: #e40d0d;
+}
+
+.popular {
+    margin: 20px;
+    display: grid;
+    grid-template-columns: 140px 140px 140px 140px;
+    grid-template-rows: 234px 234px;
+    grid-gap: 40px 40px;
+}
+
+.popular div {
+    position: relative;
+}
+
+.popular div a {
+    font-size: 15px;
+}
+
+.listen {
+    position: absolute;
+    background-color: rgb(128, 127, 127);
+    opacity: 0.8;
+    color: rgb(197, 197, 197);
+    top: -25px;
+}
+
+.listen span:first-child {
+    margin-left: 10px;
+    margin-right: 2px;
+}
+
+.listen span:last-child {
+    margin-left: 40px;
+    cursor: pointer;
+}
+
+.listen p {
+    font-size: 12px;
+    margin: 5px 0;
+}
+
+.newsong {
+    position: relative;
+    width: 95%;
+    margin: 20px auto;
+    border: 1px solid #dddcdc;
+    background-color: #f5f5f5;
+}
+
+.newsong ul {
+    padding: 20px 25px;
+}
+
+.newsong li {
+    width: 118px;
+    margin: 10px 5px;
+}
+
+.newsong p {
+    font-size: 15px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 118px;
+    margin: 0;
+}
+
+.newsong p:first-child {
+    color: #444;
+}
+
+.newsong p:last-child {
+    color: rgb(117, 117, 117);
+}
+
+.newsong img {
+    width: 118px;
+    height: 100px;
+    cursor: pointer;
+}
+
+.newsong-left,
+.newsong-right {
+    display: inline-block;
+    margin: 0 auto;
+    font-size: 20px;
+    color: #5e5c5c;
+    position: absolute;
+    top: 40%;
+}
+
+.newsong-left {
+    left: 10px;
+}
+
+.newsong-right {
+    right: 10px;
+}
+
+table thead th {
+    position: relative;
+    background-color: #f5f5f5;
+}
+
+th,
+td {
+    border: 1px solid #acacac;
+}
+
+table {
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+table thead a {
+    font-size: 18px;
+    color: rgb(63, 63, 63);
+    margin-left: 10px;
+    margin-right: 5px;
+    position: relative;
+    top: -80px;
+}
+
+table img {
+    width: 80px;
+    height: 80px;
+    padding: 20px 0 20px 20px;
+    cursor: pointer;
+}
+
+table th span {
+    color: rgb(202, 202, 202);
+    /* justify-content: center; */
+    font-size: 22px !important;
+    position: absolute;
+    top: 60px;
+    left: 110px;
+    cursor: pointer;
+}
+
+table th span:hover {
+    color: gray;
+}
+
+table th span:last-child {
+    left: 145px;
+}
+
+tbody tr:nth-child(2n) {
+    background-color: #f5f5f5;
+}
+
+tbody td {
+    height: 30px;
+}
+
+tbody tr:nth-child(2n-1) {
+    background-color: #cacaca;
+}
+
+tbody tr td span.iconfont {
+    padding: 0px 5px 0 5px;
+    cursor: pointer;
+    color: rgb(161, 161, 161);
+}
+
+tbody tr td .iconfont:hover {
+    color: rgb(119, 118, 118);
+}
+
+
+/* tbody tr td span.icon-bofang {
+    padding-left: 41px;
+} */
+
+tbody .appear {
+    float: right;
+}
+
+tbody span {
+    font-size: 15px;
+    color: rgb(63, 63, 63);
+    padding-left: 30px;
+    padding-right: 10px;
+}
+
+tbody tr:first-child span,
+tbody tr:nth-child(2) span,
+tbody tr:nth-child(3) span {
+    color: #c20c0c;
+}
+
+tbody a {
+    font-size: 15px;
+    color: rgb(63, 63, 63);
+}
+
+tbody tr:last-child a {
+    float: right;
+}
+
+.body-right .title h5 {
+    font-size: 15px;
+    display: inline-block;
+    margin: 20px 82px 5px 20px;
+}
+
+.body-right .title a {
+    font-size: 15px;
+    color: #555555;
+    margin-right: 20px;
+}
+
+.title div {
+    margin: 0 auto;
+    width: 85%;
+    height: 0;
+    border-bottom: 1px solid #b4b4b4;
+}
+
+.roles {
+    margin: 20px auto 0 auto;
+    width: 85%;
+    height: 62px;
+    background-color: #f3f2f2;
+    border: 1px solid #c2c2c2;
+    cursor: pointer;
+}
+
+.roles:hover {
+    background-color: #d8d8d8;
+}
+
+.roles img {
+    width: 62px;
+    height: 62px;
+}
+
+.roles div {
+    float: left;
+}
+
+.roles h5 {
+    font-size: 16px;
+    margin: 10px 15px;
+}
+
+.roles p {
+    font-size: 12px;
+    margin: 0 15px;
+}
+
+.application {
+    cursor: pointer;
+    font-size: 13px;
+    width: 85%;
+    height: 30px;
+    margin: 20px auto;
+    background-color: #f3f2f2;
+    border: 1px solid #c2c2c2;
+    border-radius: 4px;
+    line-height: 30px;
+    text-align: center;
+}
+
+.application:hover {
+    background-color: #f5f5f5;
+}
+
+.anchor {
+    margin: 12px auto 0 auto;
+    width: 85%;
+    height: 40px;
+}
+
+.anchor a {
+    display: block;
+    margin: 3px 10px;
+    font-size: 13px;
+}
+
+.anchor a span {
+    color: #e40d0d;
+}
+
+.anchor p {
+    margin: 0 10px;
+    font-size: 9px;
+}
+
+.anchor div {
+    float: left;
+}
+
+.anchor img {
+    width: 40px;
+}
+
+.footer div {
+    margin: 0 auto;
+    width: 985px;
+}
+
+.footer .footer-left {
+    float: left;
+    width: 520px;
+    height: 110px;
+}
+
+.footer ul {
+    font-size: 12px;
+    color: #a1a1a1;
+    margin-top: 20px;
+}
+
+.footer ul li {
+    margin-left: 5px;
+}
+
+.footer ul li:first-child {
+    margin-left: 0;
+}
+
+.footer ul li a {
+    margin-right: 5px;
+}
+
+.footer p {
+    font-size: 12px;
+    line-height: 25px;
+    color: #5c5c5c;
+}
+
+.footer p span:first-child {
+    margin-right: 20px;
+}
+
+.footer .iconfont {
+    font-size: 50px;
+    color: #a1a1a1;
+    margin: 10px;
+}
+
+.footer .footer-inco {
+    display: inline-block;
+    margin: 20px 0 20px 30px;
+    width: 60px;
+    top: 40px;
+}
+
+.footer-inco:first-child {
+    margin-left: 130px;
+}
+
+.footer-inco img {
+    width: 60px;
+    cursor: pointer;
+}
+
+.footer-inco p {
+    font-size: 5px;
+    text-align: center;
+}
+
+.bg {
+    /* height: 47px; */
+    background-color: #242424;
 }
