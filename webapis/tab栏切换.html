@@ -64,12 +64,10 @@
         var one = document.querySelector('.one');
         var lis = one.querySelectorAll('li');
         var items = document.getElementsByClassName('item');
-        console.log(items);
 
         for (var i = 0; i < lis.length; i++) {
             lis[i].setAttribute('index', i);
             lis[i].onclick = function() {
-
                 for (var i = 0; i < lis.length; i++) {
                     lis[i].className = '';
                 }

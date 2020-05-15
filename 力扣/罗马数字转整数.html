@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /**
+         * @param {string} s
+         * @return {number}
+         */
+        var romanToInt = function(s) {
+            let obj = {
+                I: 1,
+                V: 5,
+                X: 10,
+                L: 50,
+                C: 100,
+                D: 500,
+                M: 1000
+            }
+            let sum = 0
+            for (let i = 0; i < s.length; i++) {
+                let val = s[i]
+                sum += obj[val]
+                if (!!s[i - 1]) {
+                    if ((val == 'V' || val == 'X') && s[i - 1] == 'I') {
+                        sum -= 2
+                    } else if ((val == 'L' || val == 'C') && s[i - 1] == 'X') {
+                        sum -= 20
+                    } else if ((val == 'D' || val == 'M') && s[i - 1] == 'C') {
+                        sum -= 200
+                    }
+                }
+            }
+            return sum
+        }
+        console.log(romanToInt('IV'));
+    </script>
+</body>
+
+</html>

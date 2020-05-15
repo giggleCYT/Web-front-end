@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul>
+        <li>click me</li>
+        <li>click me</li>
+        <li>click me</li>
+        <li>click me</li>
+    </ul>
+    <script>
+        var elements = document.getElementsByTagName('li');
+        for (var i = 0; i < elements.length; i++) {
+            elements[i].onclick = function() {
+                elements[i].style.color = 'red'
+            }
+        }
+        var obj = {};
+        obj.log = console.log;
+        obj.log.call(console, this);
+    </script>
+</body>
+
+</html>

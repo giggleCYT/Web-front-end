@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /**
+         * @param {number[]} nums
+         * @param {number} k
+         * @return {number}
+         */
+        var reverse = function(x) {
+            var str = x < 0 ? '-' : ''
+            x = Math.abs(x) + '';
+            x = x.split('')
+            if (x[x.length - 1] == 0) {
+                x.pop()
+            }
+            var y = ''
+            console.log(x);
+            for (let i = x.length - 1; i >= 0; i--) {
+                y += (x[i])
+            }
+            y = str + y
+            y = y * 1
+            if (y < Math.pow(-2, 31) || y > (Math.pow(2, 31) - 1)) {
+                return 0;
+            } else {
+                return y;
+            }
+        };
+        var x = reverse(1534236469)
+        console.log(x);
+    </script>
+</body>
+
+</html>
