@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function formatDate(date, format) {
+            var obj = {
+                'y+': date.getFullYear().toString(), //年
+                "M+": (date.getMonth() + 1).toString(), // 月
+                "d+": date.getDate().toString(), // 日
+                "H+": date.getHours().toString(), // 时
+                "m+": date.getMinutes().toString(), // 分
+                "sb+": date.getSeconds().toString(), //秒
+                "w": date.getDay(),
+                "week": ['日', '一', '二', '三', '四', '五', '六']
+            }
+            for (let k in obj) {
+                ret = new RegExp("(" + k + ")").exec(format);
+                if (ret) {
+                    format = format.replace(ret[1], (ret[1].length == 1) ? (obj[k]) : (obj[k].padStart(ret[1].length, "0")))
+                }
+                console.log(format);
+
+                return format
+            }
+        }
+        formatDate(new Date(1409894060000), 'yyyy-MM-dd HH:mm:ss 星期w')
+        console.log(-0 === +0);
+    </script>
+</body>
+
+</html>

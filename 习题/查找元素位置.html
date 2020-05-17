@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function findAllOccurrences(arr, target) {
+            var sumarr = []
+            var index = arr.indexOf(target)
+            while (index !== -1) {
+                sumarr.push(index);
+                index = arr.indexOf(target, index + 1)
+            }
+            return sumarr
+        }
+        console.log(findAllOccurrences(['a', 'b', 'c', 'd', 'e', 'f', 'a', 'b', 'c'], 'a'))
+    </script>
+</body>
+
+</html>

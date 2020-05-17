@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function multiply(a, b) {
+            var aDec = a.toString().split('.')[1] || '';
+            var bDec = b.toString().split('.')[1] || '';
+            var fix = aDec.length + bDec.length;
+            return (a * b).toFixed(fix);
+        }
+        console.log(multiply(1.0, 0.1));
+    </script>
+</body>
+
+</html>

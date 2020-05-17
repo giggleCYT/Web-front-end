@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function prepend(arr, item) {
+            return [item].concat(arr)
+        }
+        console.log(prepend([1, 2, 3], 0));
+
+        function insert(arr, item, index) {
+            arr.splice(index, 0, item)
+            return arr
+        }
+        console.log(insert([1, 2, 3], 'aa', 2));
+    </script>
+</body>
+
+</html>
