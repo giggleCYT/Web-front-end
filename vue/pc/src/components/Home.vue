@@ -1,12 +1,12 @@
 <template>
     <el-container class="home">
         <el-header>
-            <div><img src="../assets/heima.png"><span>电商后台管理</span></div>
+            <div><img src="../assets/heima.png"><span>华十西后台管理</span></div>
             <el-button type="info" @click="logout">退出</el-button></el-header>
         <el-container>
             <el-aside :width="iScollapse?'64px':'200px'">
                 <div class="toggleList" @click="toggleLists" >|||</div>
-                <el-menu background-color="rgb(229, 157, 169)" text-color="#fff" 
+                <el-menu background-color="rgb(77, 69, 70)" text-color="#fff" 
                 active-text-color="blue" unique-opened :collapse="iScollapse" 
                 :collapse-transition="false" router :default-active="savePath">
                     <el-submenu :index="item.path+''" v-for="item in menulist" :key="item.id">
@@ -91,7 +91,7 @@ export default {
     }
 }
 .el-aside{
-    background-color: rgb(229, 157, 169);
+    background-color: rgb(77, 69, 70);
     .el-menu{
         border-right: none;
     }

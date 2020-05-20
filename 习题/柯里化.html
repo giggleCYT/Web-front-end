@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function curryIt(fn) {
+            var length = fn.length,
+                args = [];
+            var result = function(arg) {
+                args.push(arg);
+                length--;
+                if (length <= 0) {
+                    return fn.apply(this, args);
+                } else {
+                    return result;
+                }
+            }
+
+            return result;
+        }
+        var fn = function(a, b, c) {
+            return a + b + c
+        };
+        console.log(curryIt(fn)(1)(2)(3))
+    </script>
+</body>
+
+</html>
