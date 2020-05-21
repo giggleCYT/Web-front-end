@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .left {
+            float: left;
+            width: 300px;
+            height: 100px;
+            background: #631D9F;
+        }
+        
+        .right {
+            float: right;
+            width: 300px;
+            height: 100px;
+            background: red;
+        }
+        
+        .center {
+            margin-left: 300px;
+            margin-right: 300px;
+            height: 100px;
+            background-color: #4990E2;
+        }
+        
+        .main::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+    </style>
+</head>
+
+<body>
+    <article class="main">
+        <div class="left">左</div>
+        <div class="right">右</div>
+        <div class="center">中
+            <!-- <h2>浮动布局</h2> -->
+        </div>
+    </article>
+</body>
+
+</html>
