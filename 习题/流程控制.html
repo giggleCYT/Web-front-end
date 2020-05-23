@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function fizzBuzz(num) {
+            if (num % 3 == 0 && num % 5 == 0) {
+                return 'fizzbuzz';
+            } else if (num % 3 == 0) {
+                return 'fizz';
+            } else if (num % 5 == 0) {
+                return 'buzz';
+            } else if (num == null || typeof num != "number") {
+                return false;
+            } else {
+                return num
+            }
+        }
+        console.log(fizzBuzz(10));
+    </script>
+</body>
+
+</html>

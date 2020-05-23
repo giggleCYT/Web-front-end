@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function functionFunction(str) {
+            var res = Array.prototype.slice.call(arguments).join(', ')
+            var temp = function(str) {
+                res = [res, Array.prototype.slice.call(arguments)].join(', ')
+                return temp;
+            }
+            temp.toString = function() {
+                return res
+            }
+            return temp;
+        }
+        console.log(functionFunction('Hello')('world')('你好'))
+    </script>
+</body>
+
+</html>

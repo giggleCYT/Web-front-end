@@ -10,8 +10,8 @@
 <body>
     <script>
         function curryIt(fn) {
-            var length = fn.length,
-                args = [];
+            var length = fn.length;
+            var args = [];
             var result = function(arg) {
                 args.push(arg);
                 length--;
@@ -21,7 +21,6 @@
                     return result;
                 }
             }
-
             return result;
         }
         var fn = function(a, b, c) {

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function iterate(obj) {
+            return Object.keys(obj).map(function(key) {
+                return key + ': ' + obj[key]
+            });
+        }
+        var C = function() {
+            this.foo = 'bar';
+            this.baz = 'bim';
+        };
+        C.prototype.bop = 'bip';
+        console.log(iterate(new C()));
+    </script>
+</body>
+
+</html>

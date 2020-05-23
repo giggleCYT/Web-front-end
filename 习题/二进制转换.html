@@ -9,10 +9,17 @@
 
 <body>
     <script>
-        function base10(str) {
-            return parseInt(str, 2)
+        function convertToBinary(num) {
+            num = num.toString(2);
+            var len = num.length;
+            if (len < 8) {
+                var s = '00000000';
+                var s2 = s.slice(0, 8 - len)
+                num = s2 + num
+            }
+            return num
         }
-        console.log(base10(11000000));
+        console.log(convertToBinary(65));
     </script>
 </body>
 
