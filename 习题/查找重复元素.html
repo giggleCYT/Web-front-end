@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function duplicates(arr) {
+            var newarr = [];
+            for (let i = 0; i < arr.length; i++) {
+                var index = arr[i];
+                for (let m = 0; m < arr.length; m++) {
+                    if (index == arr[m] && m !== i && newarr.indexOf(index) == -1) {
+                        newarr.push(index);
+                    }
+                }
+            }
+            return newarr;
+        }
+        console.log(duplicates([1, 2, 4, 4, 3, 3, 1, 5, 3]));
+    </script>
+</body>
+
+</html>

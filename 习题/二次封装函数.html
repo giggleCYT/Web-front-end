@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function partialUsingArguments(fn) {
+            var arr = Array.prototype.slice.call(arguments, 1);
+            arr.unshift(null);
+            return fn.bind.apply(fn, arr);
+        }
+    </script>
+</body>
+
+</html>
