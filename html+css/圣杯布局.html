@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            min-width: 800px;
+        }
+        
+        .subject {
+            background-color: salmon;
+            height: 500px;
+            margin-left: 300px;
+            margin-right: 200px;
+        }
+        
+        .items {
+            height: 500px;
+            float: left;
+        }
+        
+        #conter {
+            width: 100%;
+            background-color: sandybrown;
+        }
+        
+        #left {
+            width: 300px;
+            background-color: seagreen;
+            margin-left: -100%;
+            position: relative;
+            right: 300px;
+        }
+        
+        #rigth {
+            width: 200px;
+            background-color: skyblue;
+            margin-right: -200px;
+        }
+        
+        .footer {
+            clear: both;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="subject">
+        <div id="conter" class="items">中</div>
+        <div id="left" class="items">左</div>
+        <div id="rigth" class="items">右</div>
+    </div>
+    <div class="footer"></div>
+</body>
+
+</html>
