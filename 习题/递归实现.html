@@ -14,6 +14,23 @@
                 b) 生成一个（2－32）之间的随机整数rand。
                 c) 把随机数rand插入到数组arr内，如果数组arr内已存在与rand相同的数字，则重新生成随机数rand并插入到arr内[需要使用递归实现，不能使用for/while等循环]
                 d) 最终输出一个长度为5，且内容不重复的数组arr。 -->
+    <script>
+        var arr = new Array(5);
+        var rand = Math.floor(Math.random() * (31)) + 2;
+        var i = 0;
+        fn(rand)
+
+        function fn(rand) {
+            if (arr.indexOf(rand) < 0) {
+                arr[i] = rand;
+                i++;
+            } else {
+                rand = Math.floor(Math.random() * (31)) + 2;
+            }
+            return i === 5 ? arr : fn(rand)
+        }
+        console.log(arr);
+    </script>
 </body>
 
 </html>
