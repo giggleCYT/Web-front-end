@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function fn(str) {
+            str = str.split("_");
+            var newstr = str[0];
+            for (var i = 1; i < str.length; i++) {
+                str[i] = str[i].slice(0, 1).toUpperCase() + str[i].slice(1);
+                newstr += str[i];
+            }
+            return newstr;
+        }
+        fn('class_nsdjs_d')
+    </script>
+</body>
+
+</html>
