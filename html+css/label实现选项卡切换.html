@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 20em;
+            height: 10em;
+            border: 1px solid #ddd;
+            overflow: hidden;
+            margin: auto;
+        }
+        
+        .list {
+            height: 100%;
+            background: #ddd;
+            text-align: center;
+            line-height: 10em;
+            position: relative;
+        }
+        
+        .list:nth-child(1) {
+            background-color: brown;
+        }
+        
+        .list:nth-child(2) {
+            background-color: coral;
+        }
+        
+        .list:nth-child(3) {
+            background-color: darkgoldenrod;
+        }
+        
+        .list:nth-child(4) {
+            background-color: yellow;
+        }
+        
+        .list>input {
+            position: absolute;
+            top: 0;
+            height: 100%;
+            width: 1px;
+            border: 0;
+            padding: 0;
+            margin: 0;
+            clip: rect(0 0 0 0);
+        }
+        
+        .link {
+            width: 180px;
+            margin: auto;
+        }
+        
+        .click {
+            display: inline-block;
+            border: 1px solid #ddd;
+            background-color: rgb(243, 243, 243);
+            padding: 5px 10px;
+            margin: 5px;
+            cursor: pointer;
+        }
+        
+        .click:hover {
+            background-color: #ddd;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="list"><input id="one" readonly>1</div>
+        <div class="list"><input id="two" readonly>2</div>
+        <div class="list"><input id="three" readonly>3</div>
+        <div class="list"><input id="four" readonly>4</div>
+    </div>
+    <div class="link">
+        <label class="click" for="one">1</label>
+        <label class="click" for="two">2</label>
+        <label class="click" for="three">3</label>
+        <label class="click" for="four">4</label>
+    </div>
+</body>
+
+</html>
