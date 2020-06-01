@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <ol id="ool">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ol>
+    <script>
+        var ul = document.getElementsByTagName('ul');
+        var ool = document.getElementById('ool')
+        var li = ool.getElementsByTagName('li')
+        ool.addEventListener('click', function(e) {
+            console.log(e);
+
+        })
+        console.log(ul);
+        console.log(li);
+        console.log(document.body);
+        console.log(document.documentElement);
+    </script>
+</body>
+
+</html>
