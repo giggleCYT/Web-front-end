@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var arr = [1, 3, 5, 6, 7, 9, 8];
+
+        function fn(arr) {
+            var newarr = arr.concat();
+            for (var i = 0; i < newarr.length; i++) {
+                var index = Math.floor(Math.random() * newarr.length);
+                var temp = newarr[i];
+                newarr[i] = newarr[index];
+                newarr[index] = temp;
+            }
+            return newarr;
+        }
+        console.log(fn(arr));
+    </script>
+</body>
+
+</html>
