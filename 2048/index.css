@@ -1,0 +1,34 @@
+header {
+    display: block;
+    margin: 0 auto;
+    width: 500px;
+    text-align: center;
+}
+
+header h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 60px;
+    font-weight: bold;
+}
+
+.newgamebutton {
+    display: block;
+    margin: 20px auto;
+    width: 100px;
+    padding: 10px;
+    background-color: #8f7a66;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+}
+
+.newgamebutton:hover {
+    background-color: #9f8a77;
+}
+
+header p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    margin: 20px auto;
+}
