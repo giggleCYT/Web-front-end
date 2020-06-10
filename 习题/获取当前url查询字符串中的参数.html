@@ -9,13 +9,13 @@
 
 <body>
     <script>
-        // 1.
+        //方法一
         function fn() {
             let url = window.location.search;
             url = url.replace(/\?/, '');
-            return url.replace(/&/g, ',')
+            return url.replace(/&/g, ',');
         }
-        // 2.
+        //方法二
         function urlParam() {
             const param = {};
             location.search.replace(/([^&=?]+)=([^&]+)/g, (m, $1, $2) => param[$1] = $2);
