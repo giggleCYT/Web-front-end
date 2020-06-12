@@ -10,20 +10,17 @@
 <body>
     <script>
         //方法一
-        function fn() {
+        (function fn() {
             let url = window.location.search;
             url = url.replace(/\?/, '');
             return url.replace(/&/g, ',');
-        }
+        })()
         //方法二
-        function urlParam() {
+        (function urlParam() {
             const param = {};
             location.search.replace(/([^&=?]+)=([^&]+)/g, (m, $1, $2) => param[$1] = $2);
             return param;
-        }
-        console.log(urlParam());
-
-        console.log(fn());
+        })()
     </script>
 </body>
 
