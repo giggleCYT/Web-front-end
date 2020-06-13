@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div onclick="fn(this)">diva</div>
+    <span onclick="fn(this)">span</span>
+    <a onclick="fn(this)">a</a>
+    <script>
+        // 1.
+        // document.onclick = function(e) {
+        //     var e = (e || event);
+        //     var o = e['target'] || e['srcElement'];
+        //     alert(o.tagName.toLowerCase());
+        // }
+        //2.
+        function fn(obj) {
+            alert(obj.tagName.toLowerCase())
+        }
+    </script>
+</body>
+
+</html>

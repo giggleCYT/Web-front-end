@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var arr = [1, 2, 3, 1, 5, 4, 2, 3];
+        //1.
+        var set = new Set(arr);
+        console.log(set);
+
+        //2.
+        function fn(arr) {
+            let newarr = [];
+            for (var i = 0; i < arr.length; i++) {
+                if (newarr.indexOf(arr[i]) === -1) {
+                    newarr.push(arr[i])
+                }
+            }
+            return newarr
+        }
+        console.log(fn(arr));
+
+        //数组累加和
+        function add(arr) {
+            // let sum = 0;
+            // for (var i = 0; i < arr.length; i++) {
+            //     sum += arr[i]
+            // }
+            // return sum;
+
+            return arr.reduce((x, y) => {
+                return x + y
+            })
+        }
+        console.log(add(arr));
+    </script>
+</body>
+
+</html>

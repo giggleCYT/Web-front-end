@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function fn() {
+            var now = new Date();
+            var year = now.getFullYear();
+            var ago = new Date(year, 12, 31, 23, 59, 59);
+            var time = (ago - now) / 1000;
+            var day = Math.floor(time / (24 * 60 * 60));
+            var hour = Math.floor(time % (24 * 60 * 60) / (60 * 60));
+            var minute = Math.floor(time % (24 * 60 * 60) % (60 * 60) / 60);
+            var second = Math.floor(time % (24 * 60 * 60) % (60 * 60) % 60);
+            var str = `${year}年还剩下${day}天${hour}小时${minute}分钟${second}秒钟`;
+            console.log(str);
+        }
+        window.setInterval("fn()", 1000)
+    </script>
+</body>
+
+</html>

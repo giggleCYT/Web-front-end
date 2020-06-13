@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <input type="button" id="button1" value="1" onclick="moveBtn(this);">
+        <input type="button" id="button2" value="2" />
+    </div>
+    <script>
+        function moveBtn(obj) {
+            var clone = obj.cloneNode(true);
+            var parent = obj.parentNode;
+            parent.appendChild(clone);
+            parent.removeChild(obj)
+        }
+    </script>
+</body>
+
+</html>
