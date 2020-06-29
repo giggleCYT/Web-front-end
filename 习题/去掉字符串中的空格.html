@@ -5,20 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        div {
-            width: 100px;
-            height: 100px;
-            background-color: brown;
-        }
-    </style>
 </head>
 
 <body>
-    <div></div>
     <script>
         function fn(n) {
-            return n.replace(/(^\s+)|(\s+$)/g, '')
+            // return n.replace(/(^\s+)|(\s+$)/g, '')去除两边
+            return n.replace(/\s+/g, '') //去除全部
         }
         console.log(fn('    aaa  b s  '));
     </script>
