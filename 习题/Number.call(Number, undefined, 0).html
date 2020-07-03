@@ -11,7 +11,7 @@
     <script>
         var a = Number.call(Number, undefined, 0);
         var b = Number.call.call(Number, undefined, 0);
-        console.log(a, b);
+        console.log(`Number.call(Number, undefined, 0)=${a},Number.call.call(Number, undefined, 0)=${b}`);
     </script>
 </body>
 
