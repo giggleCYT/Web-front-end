@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 去除默认样式 */
+        
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        
+        a {
+            text-decoration: none;
+            color: #000;
+            display: block;
+        }
+        /* 总体样式 */
+        
+        .emali {
+            margin: 0 auto;
+            width: 80px;
+            text-align: center;
+        }
+        
+        .header {
+            background-color: #999;
+            color: #eee;
+        }
+        
+        .emali:hover ul {
+            display: block;
+        }
+        /* 局部样式 */
+        
+        ul {
+            display: none;
+        }
+        
+        a:hover {
+            background-color: rgb(139, 139, 243);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="emali">
+        <div class="header">邮箱</div>
+        <ul>
+            <li><a href="#">QQ邮箱</a></li>
+            <li><a href="#">126邮箱</a></li>
+            <li><a href="#">139邮箱</a></li>
+        </ul>
+    </div>
+</body>
+
+</html>
